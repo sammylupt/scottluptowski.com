@@ -1,0 +1,27 @@
+---
+layout: default
+title: The blog and portfolio of Scott Luptowski
+---
+
+<div class="index-greeting cf">
+  <div class="greeting-photo cf">
+    <img src="images/scott-luptowski-circle.png" alt="Scott Luptowski" class="scott-photo"/>
+    </div>
+  <div class="index-greeting-name">
+    <h2 class="index-greeting-header">Digital Strategist and Web Developer in NYC</h2>
+  </div>
+</div>
+<div id="home cf">
+  <ul class="index-posts-list">
+    {% for post in site.categories.posts %}
+      <li>
+      <div class="article-info-box">
+      <h3 class="header-font-tag"><a class="alt-font" href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p class="article-metadata">{{ post.date | date_to_string }}</p>
+      </div>
+      <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
