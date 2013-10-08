@@ -43,6 +43,7 @@ strong {
 .navbar a, .site-navigation a {
   font-family: "Sanchez", "Georgia", serif;
   text-decoration: none;
+  font-weight: 700;
   color: white;
   transition: .1s all ease-in-out;
 }
