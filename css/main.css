@@ -124,12 +124,10 @@ ul {
   border: none;
 }
 
-code {
+code, pre {
   font-family: "Courier New","Courier",monospace !important;
-}
-
-pre {
-  font-family: "Courier New","Courier",monospace !important;
+  overflow: scroll;
+  word-wrap: break-word;
 }
 
 .article-body pre.terminal {
