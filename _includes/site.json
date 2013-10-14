@@ -1,12 +1,13 @@
 {
-   "projects": {
-      "Nicolas Cage Roulette":{
-         "title":"ncr hello",
-         "file":"ncr files sup"
+   "projects": [{
+         "title":"Nicolas Cage Roulette",
+         "url":"http://nicolascageroulette.com",
+         "description":"Stream Random Nicolas Cage movies on Netflix"
       },
-      "Spoilrs":{
-         "title":"spoilrs",
-         "file":"spoilers file"
+      {
+         "title":"spoil.rs",
+         "url":"http://spoil.rs",
+         "description":"A spoiler tag for Twitter"
       }            
-   }
+   ]
 }
