@@ -8,6 +8,11 @@
          "title":"spoil.rs",
          "url":"http://spoil.rs",
          "description":"A spoiler tag for Twitter"
+      },
+      {
+         "title":"Standings",
+         "url":"http://rubygems.org/gems/standings",
+         "description":"A command line gem to view European football/soccer standings from your terminal"
       }            
    ]
 }

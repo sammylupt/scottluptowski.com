@@ -217,6 +217,11 @@ i:hover {
     clear: both;
 }
 
+/* ugly but necessary jekyll alignment hack */
+code > .o:first-child, code > .c1:first-child, code > .err:first-child, code > .nb:first-child {
+  margin-left: -5px !important;
+}
+
 @media screen and (min-width: 460px) {
   .scott-photo {
     max-width: 150px;
