@@ -1,0 +1,235 @@
+$body-background-color: #444444;
+$main-text-color: white;
+$main-font: "Lato", Helvetica, Arial, sans-serif;
+$alt-font: "Sanchez", "Georgia", serif;
+$code-font: Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+$alt-color: coral;
+$alt-hover: #E24E35;
+
+@import '_pygments.scss';
+
+@mixin alt-font {
+  font-family: $alt-font;
+}
+
+%pagelinks {
+  @include alt-font;
+  text-decoration: none;
+  font-weight: 700;
+  color: $main-text-color;
+  transition: .1s all ease-in-out; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  -webkit-font-smoothing:antialiased;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $main-text-color;
+}
+
+a {
+  color: $alt-color;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.force-block {
+  display: block;
+}
+
+.bio-box {
+  margin: 1em 0;
+}
+
+body {
+  background-color: $body-background-color;
+}
+
+.container {
+  max-width: 700px;
+  margin: 6em auto 0 auto;
+  padding: 1em;
+  p {
+    margin-bottom: 1.5em;
+    font-size: 1.15em;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 100px auto 0 auto;
+  }
+}
+
+.greeting-photo {
+  float: left;
+  margin-right: 1em;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(231, 76, 60);
+  background-color: rgba(231, 76, 60,.95);
+  color: white;
+  padding: .5em 1em; 
+  h1 {
+    @media screen and (min-width: 768px) {
+      float: left;
+    }
+  }
+  a {
+    @extend %pagelinks;
+    &:hover {
+      color: $alt-color;
+    }
+  }
+  .site-navigation {
+    a {
+      @extend %pagelinks;
+    }
+    li {
+      margin-right: .5em;
+      display: inline-block;
+    }
+    @media screen and (min-width: 768px) {
+      float: right;
+      line-height: 2.5em;
+    }
+  }
+}
+
+.projects-list h3 a {
+  @include alt-font;
+  font-size: 1.5em;
+}
+
+.index-greeting {
+  float: left;
+  margin-bottom: 2em;
+  width: 100%;
+  h2 {
+    font-weight: 300;
+    font-size: 1.25em;
+    @media screen and (min-width: 460px) {
+      font-size: 2em;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 3em;
+    }
+  }
+}
+
+.index-greeting-name {
+  float: left;
+  width: 55%;
+  @media screen and (min-width: 460px) {
+    width: 60%;
+  }
+  @media screen and (min-width: 768px) {
+    width: 65%;
+  }
+}
+
+.index-posts-list {
+  li {
+    margin-bottom: 3em;
+  }
+}
+
+.social-media-icons {
+  width: 90%;
+  text-align: center; 
+  li {
+      display: inline-block;
+      margin: 0 .75em;
+    a {
+      text-decoration: none;
+    }  
+  }
+  i {
+    transition: all 0.1s ease-in-out;
+      &:hover {
+      color: $alt-hover;
+    }
+  }
+}
+
+.scott-photo {
+  max-height: 100px;
+  max-width: 100px;
+  @media screen and (min-width: 460px) {
+    max-height: 150px;
+    max-width: 150px;
+  }
+  @media screen and (min-width: 768px) {
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+.article-body {
+  pre {
+    border: 1px solid #586C74;
+    padding: 0 .4em;
+  }
+  h3 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  ul, ol {
+    margin-left: 1.35em;
+  }
+  code {
+    border: 1px solid #566A71;
+    padding: .2em .4em;
+    margin-bottom: 1em;
+  }
+  pre code {
+    border: none;
+  }
+  pre.terminal {
+    border: 1px solid #000;
+    color: #FFF;
+    margin-bottom: 1em;
+  }
+}
+code, code span {
+  font-family: $code-font;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+code, pre {
+  overflow: scroll;
+}
+
+
+p code {
+  background-color:rgba(40, 94, 119,.2);
+  font-size: .75em;
+  color: #859900;
+}
+
+.article-info-box {
+  a {
+    font-family: $alt-font;
+  }
+  p {
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+}
