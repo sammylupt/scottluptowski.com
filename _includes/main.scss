@@ -99,7 +99,7 @@ body {
       @extend %pagelinks;
     }
     li {
-      margin-right: .5em;
+      margin-right: .7em;
       display: inline-block;
     }
     @media screen and (min-width: 768px) {
@@ -225,7 +225,7 @@ p code {
 }
 
 .article-info-box {
-  a {
+  a, h2 {
     font-family: $alt-font;
   }
   p {

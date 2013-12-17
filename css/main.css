@@ -290,7 +290,7 @@ body {
   .navbar a:hover {
     color: coral; }
   .navbar .site-navigation li {
-    margin-right: .5em;
+    margin-right: .7em;
     display: inline-block; }
   @media screen and (min-width: 768px) {
     .navbar .site-navigation {
@@ -388,7 +388,7 @@ p code {
   font-size: .75em;
   color: #859900; }
 
-.article-info-box a {
+.article-info-box a, .article-info-box h2 {
   font-family: "Sanchez", "Georgia", serif; }
 .article-info-box p {
   font-size: .8em;
