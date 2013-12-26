@@ -2,9 +2,9 @@
 
 
 /* Ugly pygments jekyll hack */
-$selectors: o, c1, err, nb, n;
+$selectors: o, c1, err, nb, n, kd;
 @each $i in $selectors {
   code > .#{$i}:first-child {
-    margin-left: -5x !important;
+    margin-left: -5px !important;
   }
 }
