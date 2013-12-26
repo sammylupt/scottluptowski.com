@@ -3,4 +3,4 @@ description: The blog and portfolio of Scott Luptowski, a web developer and digi
 url: http://www.scottluptowski.com
 markdown: redcarpet
 pygments: true
-permalink: none
+permalink: /posts/:title
