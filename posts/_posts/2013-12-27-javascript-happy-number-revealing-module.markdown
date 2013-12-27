@@ -5,11 +5,11 @@ date:   2013-12-27 10:00:00
 categories: posts
 ---
 
-Do you know about Happy Numbers? A number is happy when
+One of my favorite problems in Ruby is figuring out if a number is 'happy.' It's a fun problem that involves recursion, converting objects between classes, and a few other tricks. 
 
-One of my favorite Ruby questions is the Happy Number problem. It involves everything: class conversion, recursion, state, etc.
+What does a Happy Number even mean? Let's consult Wikipedia: "Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1." Thus a happy number eventually leads to 1, and an unhappy number leads to an endless loop or stack overflow.
 
-Today I sat down and decided to convert the code to JavaScript. My main question to myself was how I should organize the code, and more specifically if I should use the Constructor/Prototype pattern or the Revealing Module pattern.
+Yesterday I sat down and decided to solve the problem in JavaScript. My main question to myself was how I should organize the code, and more specifically if I should use the Constructor / Prototype pattern or the Revealing Module pattern.
 
 ###Choosing a pattern
 
@@ -75,7 +75,7 @@ function splitNumberIntoPieces(number) {
 }
 ```
 
-Given our previous result — the array [4,9] — our next step is to square each number in the array, add up the squared values, and return that number. This function is solved simply with Underscore's ```_.chain``` method, which lets you chain as many Underscore methods as you want together and then retrieve the result with ```.value()```.
+Given our previous result — the array [4,9] — our next step is to square each number in the array, add up the squared values, and return that number. This function is solved simply with Underscore's ```chain()``` method, which lets you chain as many Underscore methods as you want together and then retrieve the result with ```.value()```.
 
 ```javascript
 function squareArrayAndSum(number_array) {
@@ -102,8 +102,8 @@ Finally, we check the result of this squared array (130). Does it equal 1? If so
 
 You can take a look at my code [here](https://gist.github.com/scottluptowski/8139578 "here") and run it from your command line with Node.
 
-Some elements of the constructor pattern make sense: namely that each time the HNF function is run, we create an object. But the constructor/prototype pattern suffers from a bigger flaw: there is no need for helper/implementation functions to be publicly available, especially attached to a prototype.
+Some elements of the constructor pattern make sense: namely that each time the HNF function is run, we have a resulting object. But the constructor / prototype pattern suffers from a bigger flaw: there is no need for helper / implementation functions to be publicly available, as they would be if they were attached to the HNF's prototype.
 
-I believe the Revealing Module pattern was the perfect solution for this problem. It provides structure for the helper functions while only exposing publicly the one method necessary and needed to determine if a number is happy.
+I believe the Revealing Module pattern was the perfect solution for this problem. It provides structure for the helper functions while only exposing publicly the one method necessary to determine if a number is happy.
 
 I'm very interested in hearing how I could improve this module more. Feel free to let me know on [Twitter](http://www.twitter.com/scottluptowski "My twitter profile").
