@@ -29,6 +29,12 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 640px) {
+  .container {
+    padding-top: 1em;
+  }
+}
+
 a {
   color: #fefe54;
   text-decoration: none;
@@ -84,6 +90,12 @@ p {
 
 .project-title:after {
   content: " <<<";
+}
+
+@media screen and (max-width: 640px) {
+  .project-title:before, .project-title:after {
+    display: none;
+  }
 }
 
 .scott-photo {
