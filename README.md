@@ -1,1 +1,1 @@
-The personal blog and portfolio of Scott Luptowski
+The portfolio of Scott Luptowski

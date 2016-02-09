@@ -1,27 +1,112 @@
----
-layout: default
-title: The blog and portfolio of Scott Luptowski
----
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Scott Luptowski | Software Developer </title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="Scott Luptowski, scottluptowski, scottlup">
+  
+  <meta name="description" content="The portfolio of Scott Luptowski, a software developer and creative technologist in New York City." />
+  
+  <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="summary">Scott Luptowski is a software developer and creative technologist in New York City.
+      </h1>
+      
+      <section>
+        <div class="section-header">About</div>
+        <div class="clearfix">
+          <img src="images/headshot.jpg" class="scott-photo" alt="">
+          <div class="content-wrapper">
+            <p>Product Engineer at <a href="http://www.madebymany.com">Many by Many</a> New York.</p>
+            <p>My languages of choice are Ruby and JavaScript.</p>
+            <p>My personal creations have been featured by New York Magazine, Forbes, Fast Company, Time, The Huffington Post, Mashable, and on the front pages of Buzzfeed and Reddit.</p>
+          </div>
+        </div>
+      </section>
 
-<div class="index-greeting cf">
-  <div class="greeting-photo cf">
-    <img src="images/scott-luptowski-circle.png" alt="Scott Luptowski" class="scott-photo"/>
-    </div>
-  <div class="index-greeting-name">
-    <h2 class="index-greeting-header">Digital Strategist and Web Developer in NYC</h2>
-  </div>
-</div>
-<div id="home cf">
-  <ul class="index-posts-list">
-    {% for post in site.categories.posts %}
-      <li>
-      <div class="article-info-box">
-      <h3 class="header-font-tag"><a class="alt-font" href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p class="article-metadata">{{ post.date | date_to_string }}</p>
-      </div>
-      <p>{{ post.excerpt }}</p>
-      </li>
-    {% endfor %}
-  </ul>
 
-</div>
+      <section>
+        <div class="section-header">Projects</div>  
+
+        <ul>
+          <li class="project">
+            <span class="project-title">
+              <a href="http://www.nicolascageroulette.com">Nicolas Cage Roulette</a>
+            </span>
+            <p class="description">
+              Stream random Nicolas Cage movies on Netflix.
+            </p>
+
+            <p class="description">
+              Featured by <a href="http://www.fastcocreate.com/1682547/netflix-users-play-nicolas-cage-roulette-never-lose">Fast Company</a>, <a href="http://www.huffingtonpost.com/2013/03/05/nicolas-cage-roulette-netflix_n_2811850.html">The Huffington Post</a>, <a href="http://mashable.com/2013/03/04/nicolas-cage-roulette/">Mashable</a>, and <a href="http://www.buzzfeed.com/erinlarosa/nicolas-cage-roulette-is-just-as-awesome-as-it-sounds"></a>Buzzfeed.
+            </p>
+
+            <p class="description">
+              Built in JavaScript. Source on <a href="https://github.com/scottluptowski/nicolas-cage-roulette">GitHub</a>.
+            </p>
+          </li>
+
+          <li class="project">
+            <span class="project-title">
+              <a href="https://github.com/scottluptowski/browse-with-guy">Browse with Guy</a>
+            </span>
+
+            <p class="description">A Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri.</p>
+
+            <p class="description">Built for the <a href="http://www.stupidhackathon.com">2016 Stupid Shit Hackathon</a>. Featured by <a href="http://nymag.com/following/2016/02/stupid-hackathon-actually-very-good-and-funny.html">New York Magazine</a>.</p>
+
+            <p class="description">Download on the <a href="https://chrome.google.com/webstore/detail/browse-with-guy/pffcpolokheijlggcplcbkadpgkhmomj?hl=en-US">Chrome Store</a>. Source on <a href="https://github.com/scottluptowski/browse-with-guy">GitHub</a>.</p>
+          </li>
+
+          <li class="project">
+            <span class="project-title">Spoil.rs (RIP)</span>
+
+            <p class="description">A spoiler tag for Twitter. Embed a hidden spoiler in your tweets so you don't ruin TV and movies for others.</p>
+            <p class="description">Built with PHP and MySQL.</p>
+            <p class="description">Featured by <a href="http://www.forbes.com/sites/ewanspence/2013/05/28/tweeting-out-spoilers-without-spoiling-the-fun">Forbes</a> and <a href="http://techland.time.com/2013/05/29/spoil-rs-helps-you-hide-spoilers-on-twitter/">Time</a>.</p>
+          </li>
+
+          <li class="project">
+            <span class="project-title">
+              <a href="http://newyorktimesorjennyholzer.com">New York Times or Jenny Holzer?</a></span>
+
+            <p class="description">A guessing game between random text snippets from the work of Jenny Holzer and tweets from the New York Times Minus Context twitter account.</p>
+
+            <p class="description">Built with JavaScript (React, Alt). Source on <a href="https://github.com/scottluptowski/newyorktimesorjennyholzer">GitHub</a>.</p>
+          </li>
+          <li class="project">
+            <span class="project-title">
+              <a href="https://github.com/scottluptowski/standings">Standings</a>
+            </span>
+            <p class="description">A command line tool to view European football/soccer scores.</p>
+            <p class="description">Built with Ruby. Source on <a href="https://github.com/scottluptowski/standings">GitHub</a>.</p>
+          </li>
+        </ul>
+      </section>
+
+
+
+      <section>
+      <div class="section-header">Contact</div>
+        <div>Find me on <a href="https://twitter.com/scottluptowski">Twitter</a>, <a href="https://github.com/scottluptowski">GitHub</a>, <a href="https://www.linkedin.com/in/scottluptowski">LinkedIn</a>, or <a href="https://www.instagram.com/scottluptowski/">Instagram</a>.</div>
+      </section>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7600440-11']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  </body>
+</html>
