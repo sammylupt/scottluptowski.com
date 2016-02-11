@@ -10,5 +10,8 @@
     "type": "git",
     "url": "https://github.com/scottluptowski/scottluptowski.com.git"
   },
-  "homepage": "https://github.com/scottluptowski/scottluptowski.com"
+  "homepage": "https://github.com/scottluptowski/scottluptowski.com",
+  "dependencies": {
+    "fontfaceobserver": "^1.6.3"
+  }
 }
