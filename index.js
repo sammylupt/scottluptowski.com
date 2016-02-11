@@ -1,4 +1,5 @@
 require("fontfaceobserver");
+require("./css/main.scss");
 
 (function(){
   var observer = new FontFaceObserver("DOS");

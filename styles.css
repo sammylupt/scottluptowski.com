@@ -1,0 +1,117 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  margin: 0 auto;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 18px;
+  line-height: 20px;
+  color: #bbbbbb;
+  background-color: #000084;
+  font-weight: bold;
+  width: 90%; }
+
+@font-face {
+  font-family: 'DOS';
+  src: url("/fonts/Fixedsysff500c.eot");
+  src: local("\263A"), url("/fonts/Fixedsys500c.woff") format("woff"), url("/fonts/Fixedsys500c.ttf") format("truetype"), url("/fonts/Fixedsys500c.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body.font-loaded {
+  font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace; }
+
+.container {
+  max-width: 960px;
+  padding: 2em 0;
+  margin: 0 auto; }
+  @media screen and (max-width: 640px) {
+    .container {
+      padding-top: 1em; } }
+
+a {
+  color: #fefe54;
+  text-decoration: none; }
+  a:hover {
+    outline: 0;
+    background: #aa5500; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em; }
+
+.summary {
+  padding: 9px 14px;
+  margin: 9px 0;
+  font-size: 18px;
+  color: #ffffff;
+  border: 2px solid #bbbbbb; }
+
+.section-header {
+  padding: 20px;
+  margin: 20px 0 20px;
+  background: #00aaaa;
+  color: black;
+  text-transform: uppercase; }
+
+.project {
+  margin-bottom: 3em; }
+  .project:last-of-type {
+    margin-bottom: 0; }
+
+.project-title,
+.project-title a {
+  color: #fe54fe; }
+
+.project-title a:hover {
+  background: none;
+  text-decoration: underline; }
+
+.project-title:before {
+  content: ">>> "; }
+
+.project-title:after {
+  content: " <<<"; }
+
+@media screen and (max-width: 640px) {
+  .project-title:before, .project-title:after {
+    display: none; } }
+
+.bio-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row; }
+
+.scott-photo {
+  width: 300px; }
+
+.content-wrapper {
+  padding-left: 20px; }
+
+@media screen and (max-width: 640px) {
+  .scott-photo {
+    width: inherit;
+    max-width: 100%; }
+  .bio-wrapper {
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  .content-wrapper {
+    padding-left: 0; } }
+
+ul {
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
