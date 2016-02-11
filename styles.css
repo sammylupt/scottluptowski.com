@@ -86,20 +86,20 @@ p {
   -webkit-flex-direction: row;
   flex-direction: row; }
 
-.scott-photo {
+.bio-photo {
   width: 300px; }
 
-.content-wrapper {
+.bio-content {
   padding-left: 20px; }
 
 @media screen and (max-width: 640px) {
-  .scott-photo {
+  .bio-photo {
     width: inherit;
     max-width: 100%; }
   .bio-wrapper {
     -webkit-flex-direction: column;
     flex-direction: column; }
-  .content-wrapper {
+  .bio-content {
     padding-left: 0; } }
 
 ul {

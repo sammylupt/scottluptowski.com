@@ -109,16 +109,16 @@ p {
   flex-direction: row;
 }
 
-.scott-photo {
+.bio-photo {
   width: 300px;
 }
-.content-wrapper {
+.bio-content {
   padding-left: 20px;
 }
 
 @media screen and (max-width: 640px) {
 
-  .scott-photo {
+  .bio-photo {
     width: inherit;
     max-width: 100%;
   }
@@ -127,7 +127,7 @@ p {
     flex-direction: column;
   }
 
-  .content-wrapper {
+  .bio-content {
     padding-left: 0;
   }
 }
