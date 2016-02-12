@@ -4,7 +4,7 @@
   "description": "The portfolio of Scott Luptowski",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --color --watch"
   },
   "repository": {
     "type": "git",
