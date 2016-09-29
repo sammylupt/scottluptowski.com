@@ -1,0 +1,68 @@
+.project-page {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.project-header {
+  font-size: 1.5em;
+  margin: 1em auto;
+}
+
+.project-summary {
+  margin-bottom: 1em;
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.project-summary-block {
+  margin-top: 1em;
+}
+
+.project-summary-callout {
+  display: inline-block;
+  background-color: #c0ffee;
+  padding: .5em;
+}
+
+.project-links {
+  margin-bottom: 2em;
+}
+
+.project-link {
+  margin-bottom: 0.25em;
+}
+
+.link-meta {
+  margin-left: .25em;
+
+  @media (max-width: 800px) {
+    display: block;
+    font-size: .75em;
+  }
+}
+
+.project-images img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+  max-width: 95%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.code-block {
+  display: block;
+  margin-top: 0.5em;
+}
+
+code {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 0.5em;
+}

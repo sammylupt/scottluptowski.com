@@ -1,0 +1,29 @@
+.quote-section {
+  padding-top: 1em;
+
+  &:before {
+    content: "*******";
+    display: block;
+    font-size: 1.5em;
+    margin: 0 auto 1em;
+    text-align: center;
+  }
+}
+
+.press-quote {
+  margin-bottom: 1em;
+}
+
+.press-attribution {
+  padding-left: 2em;
+  font-weight: bold;
+  font-style: italic;
+
+  &:before {
+    content: "- ";
+  }
+
+  @media (max-width: 800px) {
+    padding-left: 1em;
+  }
+}

@@ -1,22 +1,25 @@
 {
-  "name": "scottluptowski_dotcom",
-  "version": "1.0.0",
+  "name": "scott-luptowski",
   "description": "The portfolio of Scott Luptowski",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack --color --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/scottluptowski/scottluptowski.com.git"
-  },
-  "homepage": "https://github.com/scottluptowski/scottluptowski.com",
-  "dependencies": {
-    "fontfaceobserver": "^1.6.3"
-  },
+  "author": "Scott Luptowski",
+  "homepage": "http://www.scottluptowski.com",
+  "private": true,
   "devDependencies": {
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "sass-loader": "^3.1.2"
+    "create-react-app-sass": "^1.1.0",
+    "react-scripts": "0.8.3"
+  },
+  "dependencies": {
+    "history": "^4.2.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-g-analytics": "^0.3.9",
+    "react-helmet": "^3.2.3",
+    "react-router": "4.0.0-alpha.6"
+  },
+  "scripts": {
+    "start": "react-scripts-with-sass start",
+    "build": "react-scripts-with-sass build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

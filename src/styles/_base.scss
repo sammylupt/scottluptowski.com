@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier", "Courier New", "monospace", serif;
+}
+
+a, a:visited {
+  color: #1616EF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1
+}
+
+.route-container {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+
+  @media (max-width: 800px) {
+    width: 95%;
+  }
+}
+
+footer {
+  font-size: .7em;
+  text-align: center;
+  margin: 2em auto 1em;
+  padding-bottom: .5em;
+}
+
+.section-header p, .item-link {
+  margin-bottom: 1em;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
