@@ -1,12 +1,10 @@
 // @flow
 
 import React, { Component } from 'react'
-import Helmet from "react-helmet"
-import Image from "../components/Image"
+import Helmet from 'react-helmet'
 
-import type { Project, ProjectLink, ImageWithMeta } from "../types"
-
-const summaryTransform = (input: string): string => input.replace(/className/g, "class")
+import Image from '../components/Image'
+import type { Project, ProjectLink, ImageWithMeta } from '../types'
 
 class ProjectPage extends Component {
 
@@ -22,43 +20,45 @@ class ProjectPage extends Component {
           title={pageTitle}
         />
         <p className="project-header">{name}</p>
-        <p className="project-summary" dangerouslySetInnerHTML={{__html: summaryTransform(summary)}} />
+        <p className="project-summary"
+           dangerouslySetInnerHTML={{__html: summary}}
+        />
 
-          <div className="project-links">
-            <div>Links:</div>
-              {
-                links.map((link: ProjectLink, i: number) => {
-                  return (
-                    <div key={i} className="project-link">
-                      <a href={link.url} target="_blank">{link.name}</a>
-                      { link.meta &&
-                        <span className="link-meta">{link.meta}</span>
-                      }
-                    </div>
-                  )
-                })
-              }
-          </div>
-          <div className="project-images">
+        <div className="project-links">
+          <div>Links:</div>
             {
-              images.map((image: ImageWithMeta, i: number) => {
-                const { description, ...rest } = image
-
+              links.map((link: ProjectLink, i: number) => {
                 return (
-                  <div className="project-image" key={i}>
-                    <Image
-                      {...rest}
-                    />
-                    { image.description &&
-                      <div className="project-image-description">
-                        {description}
-                      </div>
+                  <div key={i} className="project-link">
+                    <a href={link.url} target="_blank">{link.name}</a>
+                    { link.meta &&
+                      <span className="link-meta">{link.meta}</span>
                     }
                   </div>
                 )
               })
             }
-          </div>
+        </div>
+        <div className="project-images">
+          {
+            images.map((image: ImageWithMeta, i: number) => {
+              const { description, ...rest } = image
+
+              return (
+                <div className="project-image" key={i}>
+                  <Image
+                    {...rest}
+                  />
+                  { image.description &&
+                    <div className="project-image-description">
+                      {description}
+                    </div>
+                  }
+                </div>
+              )
+            })
+          }
+        </div>
       </div>
     )
   }

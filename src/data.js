@@ -11,8 +11,8 @@ const projects: Array<Project> = [
         Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.
 
 
-        <div className="project-summary-block">
-          <div className="project-summary-callout">
+        <div class="project-summary-block">
+          <div class="project-summary-callout">
             "Best prank of 2016" - Gawker
           </div>
         </div>
@@ -107,7 +107,7 @@ const projects: Array<Project> = [
       <div>
         Browse With Guy is a Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri. It was built for the <a href="http://www.stupidhackathon.com/" target="_blank">2016 Stupid Shit No One Needs and Terrible Ideas Hackathon</a>.
 
-        <div className="project-summary-block">
+        <div class="project-summary-block">
           <a href="https://chrome.google.com/webstore/detail/browse-with-guy/pffcpolokheijlggcplcbkadpgkhmomj/reviews?hl=en-US" target="_blank">Download on the Chrome Store</a>
         </div>
       </div>
@@ -139,9 +139,9 @@ const projects: Array<Project> = [
     summary: `
       <div>
         Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.
-        <div className="project-summary-block">
+        <div class="project-summary-block">
           To install, run the following command from your shell:
-          <div className="code-block">
+          <div class="code-block">
             <code>
               $ gem install standings
             </code>
