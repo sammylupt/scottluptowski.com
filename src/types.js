@@ -17,7 +17,8 @@ export type ProjectLink = {
 
 export type ImageWithMeta = {
   src: string,
-  alt: string
+  alt: string,
+  description?: string
 }
 
 export type Post = {

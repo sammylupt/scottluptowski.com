@@ -43,7 +43,7 @@
   }
 }
 
-.project-images img {
+.project-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -53,6 +53,13 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.project-image-description {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .8em;
+  margin: .5em 0 1em;
+  color: #999999;
 }
 
 .code-block {

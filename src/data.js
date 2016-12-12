@@ -44,15 +44,18 @@ const projects: Array<Project> = [
     images: [
       {
         src: "hamiltowned/1.png",
-        alt: "Hamiltowned"
+        alt: "Hamiltowned",
+        description: "Enter your name, your friend's name, and their email address"
       },
       {
         src: "hamiltowned/2.png",
-        alt: "Hamiltowned"
+        alt: "Hamiltowned",
+        description: "Your friend will receive an email informing them that they won the lottery, complete with a link to purchase their ticket"
       },
       {
         src: "hamiltowned/3.png",
-        alt: "Hamiltowned"
+        alt: "Hamiltowned",
+        description: "The ticket link in the email brought the recipient to a page where they found out they were pranked"
       }
     ],
   },
@@ -227,11 +230,13 @@ const projects: Array<Project> = [
     images: [
       {
         src: "spoilrs/1.png",
-        alt: "Spoil.rs"
+        alt: "Spoil.rs",
+        description: "After logging into Spoil.rs with their Twitter login credentials, users would enter a message and a secret. This would send a tweet that contained the message and a link to the secret"
       },
       {
         src: "spoilrs/2.gif",
-        alt: "Spoil.rs"
+        alt: "Spoil.rs",
+        description: "After clicking through the link in the tweet, users could move their mouse over (or touch) the bars to reveal the secret text below"
       }
     ]
   }
