@@ -67,7 +67,7 @@ class App extends Component {
             </div>
           </div>
           <footer>
-            © 2016 Scott Luptowski
+            © 2017 Scott Luptowski
           </footer>
         </div>
       </BrowserRouter>
