@@ -30,7 +30,7 @@ class ProjectPage extends Component {
               links.map((link: ProjectLink, i: number) => {
                 return (
                   <div key={i} className="project-link">
-                    <a href={link.url} target="_blank">{link.name}</a>
+                    <a href={link.url} target="_blank">{link.title}</a>
                     { link.meta &&
                       <span className="link-meta">{link.meta}</span>
                     }

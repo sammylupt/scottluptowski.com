@@ -2,12 +2,12 @@
 
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import type { Post } from '../types'
+import type { Link } from '../types'
 
 class PostsPage extends Component {
 
   props: {
-    posts: Array<Post>
+    posts: Array<Link>
   }
 
   render() {
@@ -20,7 +20,7 @@ class PostsPage extends Component {
         />
         <p>Here are some links to posts I've written about software development:</p>
         {
-          posts.map((post: Post, i: number) => {
+          posts.map((post: Link, i: number) => {
             return (
               <div className="item-link" key={i}>
                 <a

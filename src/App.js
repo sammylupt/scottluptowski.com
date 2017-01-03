@@ -13,7 +13,7 @@ import ProjectPage from './pages/ProjectPage'
 import ContactPage from './pages/ContactPage'
 import PageNotFound from './components/PageNotFound'
 
-import { projects, posts } from './data'
+import { projects, posts, links } from './data'
 import type { Project, LocationProps } from './types'
 
 const renderProjectOrMiss = ({params}: LocationProps) => {
@@ -62,7 +62,10 @@ class App extends Component {
                 pattern="/projects/:project"
                 render={renderProjectOrMiss}
               />
-              <Match pattern="/contact" component={ContactPage}/>
+              <Match
+                pattern="/contact"
+                render={() => <ContactPage links={links} />}
+              />
               <Miss component={PageNotFound} />
             </div>
           </div>

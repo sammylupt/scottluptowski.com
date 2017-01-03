@@ -1,6 +1,6 @@
 // @flow
 
-import type { Project, Post } from './types'
+import type { Project, Link } from './types'
 
 const projects: Array<Project> = [
   {
@@ -21,20 +21,20 @@ const projects: Array<Project> = [
     links: [
       { 
         url: "http://gawker.com/tricking-someone-into-believing-they-won-the-hamilton-l-1783463868",
-        name: "Gawker"
+        title: "Gawker"
       },
       { 
         url: "https://www.buzzfeed.com/katienotopoulos/lawyers-for-hamilton-shut-down-this-prank-tickets-site",
-        name: "BuzzFeed"
+        title: "BuzzFeed"
       },
       { 
         url: "http://www.stitcher.com/podcast/buzzfeeds-internet-explorer/e/dicks-out-for-harambe-46506091",
-        name: "Internet Explorer Podcast",
+        title: "Internet Explorer Podcast",
         meta: "(Jump to 25:53)"
       },
       {
         url: "http://gothamist.com/2016/07/08/hamilton_safety_first.php",
-        name: "Gothamist"
+        title: "Gothamist"
       }
     ],
     featuredImage: {
@@ -70,23 +70,23 @@ const projects: Array<Project> = [
     links: [
       {
         url: "http://www.nicolascageroulette.com",
-        name: "Play Nicolas Cage Roulette"
+        title: "Play Nicolas Cage Roulette"
       },
       {
         url: "http://www.fastcocreate.com/1682547/netflix-users-play-nicolas-cage-roulette-never-lose",
-        name: "Fast Company"
+        title: "Fast Company"
       },
       {
         url: "http://www.huffingtonpost.com/2013/03/05/nicolas-cage-roulette-netflix_n_2811850.html",
-        name: "The Huffington Post"
+        title: "The Huffington Post"
       },
       {
         url: "http://mashable.com/2013/03/04/nicolas-cage-roulette/",
-        name: "Mashable"
+        title: "Mashable"
       },
       {
         url: "http://www.buzzfeed.com/erinlarosa/nicolas-cage-roulette-is-just-as-awesome-as-it-sounds",
-        name: "BuzzFeed"
+        title: "BuzzFeed"
       }
     ],
     featuredImage: {
@@ -115,11 +115,11 @@ const projects: Array<Project> = [
     links: [
       {
         url: "http://nymag.com/following/2016/02/stupid-hackathon-actually-very-good-and-funny.html",
-        name: "New York Magazine",
+        title: "New York Magazine",
       },
       {
         url: "https://github.com/scottluptowski/browse-with-guy",
-        name: "View source on GitHub",
+        title: "View source on GitHub",
       }
     ],
     featuredImage: {
@@ -152,11 +152,11 @@ const projects: Array<Project> = [
     links: [
       {
         url: "https://rubygems.org/gems/standings",
-        name: "RubyGems"
+        title: "RubyGems"
       },
       {
         url: "https://github.com/scottluptowski/standings",
-        name: "View source on GitHub"
+        title: "View source on GitHub"
       }
     ],
     featuredImage: {
@@ -186,11 +186,11 @@ const projects: Array<Project> = [
     links: [
       {
         url: "http://www.newyorktimesorjennyholzer.com",
-        name: "Play New York Times or Jenny Holzer?"
+        title: "Play New York Times or Jenny Holzer?"
       },
       {
         url: "https://github.com/scottluptowski/newyorktimesorjennyholzer",
-        name: "View source on GitHub",
+        title: "View source on GitHub",
       }
     ],
     featuredImage: {
@@ -216,11 +216,11 @@ const projects: Array<Project> = [
     links: [
       {
         url: "http://www.forbes.com/sites/ewanspence/2013/05/28/tweeting-out-spoilers-without-spoiling-the-fun",
-        name: "Forbes"
+        title: "Forbes"
       },
       {
         url: "http://techland.time.com/2013/05/29/spoil-rs-helps-you-hide-spoilers-on-twitter/",
-        name: "Time"
+        title: "Time"
       }
     ],
     featuredImage: {
@@ -242,7 +242,7 @@ const projects: Array<Project> = [
   }
 ]
 
-const posts: Array<Post> = [
+const posts: Array<Link> = [
   {
     title: "Code Sharing Between React Native and React Web Apps",
     url: "https://medium.com/the-many/code-sharing-between-react-native-and-react-web-apps-b1e1de22fc53"
@@ -261,4 +261,27 @@ const posts: Array<Post> = [
   }
 ]
 
-export { projects, posts }
+const links: Array<Link> = [
+  {
+    title: "Twitter",
+    url: "https://twitter.com/scottluptowski"
+  },
+  {
+    title: "Medium",
+    url: "https://medium.com/@scottluptowski"
+  },
+  {
+    title: "GitHub",
+    url: "https://github.com/scottluptowski",
+  },
+  {
+    title: "Instagram",
+    url: "https://www.instagram.com/scottluptowski/",
+  },
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/scottluptowski",
+  }
+]
+
+export { projects, posts, links }

@@ -9,9 +9,12 @@ export type Project = {
   images: Array<ImageWithMeta>
 }
 
-export type ProjectLink = {
-  url: string,
-  name: string,
+export type Link = {
+  title: string,
+  url: string
+}
+
+export type ProjectLink = Link & {
   meta?: string
 }
 
@@ -19,11 +22,6 @@ export type ImageWithMeta = {
   src: string,
   alt: string,
   description?: string
-}
-
-export type Post = {
-  title: string,
-  url: string
 }
 
 export type LocationProps = {
