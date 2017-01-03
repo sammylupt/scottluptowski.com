@@ -1,9 +1,9 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import ReactDocumentTitle from 'react-document-title'
 
 const PageNotFound = () => (
   <div>
-    <Helmet
+    <ReactDocumentTitle
       title="Scott Luptowski | Not Found"
     />
     Page not found

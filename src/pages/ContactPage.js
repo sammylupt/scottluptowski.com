@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import type { Link } from '../types'
-import Helmet from 'react-helmet'
+import ReactDocumentTitle from 'react-document-title'
 
 class ContactPage extends Component {
 
@@ -15,7 +15,7 @@ class ContactPage extends Component {
 
     return (
       <div className="section-header">
-        <Helmet
+        <ReactDocumentTitle
           title="Scott Luptowski | Contact"
         />
         <p>Get in touch:</p>

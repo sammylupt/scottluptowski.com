@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import ReactDocumentTitle from 'react-document-title'
 import type { Link } from '../types'
 
 class PostsPage extends Component {
@@ -15,7 +15,7 @@ class PostsPage extends Component {
 
     return (
       <div className="section-header">
-        <Helmet
+        <ReactDocumentTitle
           title="Scott Luptowski | Posts"
         />
         <p>Here are some links to posts I've written about software development:</p>

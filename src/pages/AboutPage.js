@@ -1,14 +1,14 @@
 // @flow
 
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import ReactDocumentTitle from 'react-document-title'
 
 class About extends Component {
 
   render() {
     return (
       <div className="section-header">
-        <Helmet
+        <ReactDocumentTitle
           title="Scott Luptowski | About"
         />
         <p>I'm a Product Engineer at Many by Many.</p>

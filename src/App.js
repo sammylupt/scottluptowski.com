@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { Match, Miss } from 'react-router'
 import { BrowserRouter } from 'react-g-analytics'
-import Helmet from 'react-helmet'
+import ReactDocumentTitle from 'react-document-title'
 
 import Menu from './components/Menu'
 import ProjectListPage from './pages/ProjectListPage'
@@ -26,12 +26,6 @@ const renderProjectOrMiss = ({params}: LocationProps) => {
   }
 }
 
-const metaTags = [
-  { name: "description",
-    content: "The portfolio of Scott Luptowski, a software developer and creative technologist in New York City."
-  }
-]
-
 class App extends Component {
 
   render() {
@@ -39,9 +33,8 @@ class App extends Component {
       <BrowserRouter id="UA-7600440-11">
         <div className="app-wrapper">
           <div className="app-content">
-            <Helmet
+            <ReactDocumentTitle
               title="Scott Luptowski"
-              meta={metaTags}
             />
             <Menu />
             <div className="route-container">

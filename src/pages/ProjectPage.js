@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import ReactDocumentTitle from 'react-document-title'
 
 import Image from '../components/Image'
 import type { Project, ProjectLink, ImageWithMeta } from '../types'
@@ -16,7 +16,7 @@ class ProjectPage extends Component {
 
     return (
       <div className="project-page">
-        <Helmet
+        <ReactDocumentTitle
           title={pageTitle}
         />
         <p className="project-header">{name}</p>
