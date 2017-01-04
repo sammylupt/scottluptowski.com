@@ -134,6 +134,32 @@ const projects: Array<Project> = [
     ]
   },
   {
+    name: "SVU EBooks",
+    slug: "svu-ebooks",
+    summary: `
+      <div>
+        SVU EBooks is a series of fake Law and Order SVU episode summaries I generated. I gathered the summary of every SVU episode from Hulu, IMDb, and Rotten Tomatoes, and used a Markov Chain library to predict new episodes.
+      </div>
+    `,
+    links: [
+      {
+        url: "http://mashable.com/2017/01/03/law-and-order-svu-episode-generator/",
+        title: "Mashable"
+      },
+      {
+        url: "https://github.com/scottluptowski/svu_ebooks",
+        title: "View source on GitHub"
+      }
+    ],
+    featuredImage: {
+      src: "svu-ebooks/preview.png",
+      alt: "SVU Ebooks"
+    },
+    tweets: [
+      '816304367926181888', '816345955360448512'
+    ]
+  },
+  {
     name: "Standings",
     slug: "standings",
     summary: `

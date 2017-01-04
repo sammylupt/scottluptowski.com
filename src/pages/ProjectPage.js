@@ -2,16 +2,18 @@
 
 import React, { Component } from 'react'
 import ReactDocumentTitle from 'react-document-title'
+import TweetEmbed from 'react-tweet-embed'
 
-import Image from '../components/Image'
-import type { Project, ProjectLink, ImageWithMeta } from '../types'
+import ProjectImageList from '../components/ProjectImageList'
+import ProjectLinkSection from '../components/ProjectLinkSection'
+import type { Project } from '../types'
 
 class ProjectPage extends Component {
 
   props: Project
 
   render() {
-    const { links, images, name, summary } = this.props
+    const { links, images, name, summary, tweets } = this.props
     const pageTitle = `Scott Luptowski | Projects | ${name}`
 
     return (
@@ -24,41 +26,19 @@ class ProjectPage extends Component {
            dangerouslySetInnerHTML={{__html: summary}}
         />
 
-        <div className="project-links">
-          <div>Links:</div>
-            {
-              links.map((link: ProjectLink, i: number) => {
-                return (
-                  <div key={i} className="project-link">
-                    <a href={link.url} target="_blank">{link.title}</a>
-                    { link.meta &&
-                      <span className="link-meta">{link.meta}</span>
-                    }
-                  </div>
-                )
-              })
-            }
-        </div>
-        <div className="project-images">
-          {
-            images.map((image: ImageWithMeta, i: number) => {
-              const { description, ...rest } = image
+        <ProjectLinkSection links={links} />
 
-              return (
-                <div className="project-image" key={i}>
-                  <Image
-                    {...rest}
-                  />
-                  { image.description &&
-                    <div className="project-image-description">
-                      {description}
-                    </div>
-                  }
-                </div>
-              )
-            })
-          }
-        </div>
+        { images &&
+          <ProjectImageList images={images} />
+        }
+
+        { tweets &&
+          tweets.map((tweet: string, i: number) => {
+            return (
+              <TweetEmbed id={tweet} key={i}/>
+            )
+          })
+        }
       </div>
     )
   }
