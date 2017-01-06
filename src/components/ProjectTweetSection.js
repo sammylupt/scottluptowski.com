@@ -18,8 +18,8 @@ class ProjectTweetSection extends Component {
           return (
             <div className="tweet-wrapper" key={i}>
               <TweetEmbed id={tweet} key={i} preview={
-                <div className="tweet-loading">Loading...</div>
-              } 
+                <div className="tweet-loading">Loading Tweet...</div>
+              }
               />
             </div>
           )
