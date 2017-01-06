@@ -35,7 +35,12 @@ class ProjectPage extends Component {
         { tweets &&
           tweets.map((tweet: string, i: number) => {
             return (
-              <TweetEmbed id={tweet} key={i}/>
+              <div className="tweet-wrapper" key={i}>
+                <TweetEmbed id={tweet} key={i} preview={
+                  <div className="tweet-loading">Loading...</div>
+                } 
+                />
+              </div>
             )
           })
         }

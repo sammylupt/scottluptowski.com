@@ -4460,9 +4460,9 @@ react-side-effect@^1.0.2:
   dependencies:
     fbjs "0.1.0-alpha.10"
 
-react-tweet-embed@^1.0.3:
+"react-tweet-embed@git+ssh://git@github.com/scottluptowski/react-tweet-embed#master":
   version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-tweet-embed/-/react-tweet-embed-1.0.3.tgz#05b1dac46cea1e3bd8ccae596d60d72568677f36"
+  resolved "git+ssh://git@github.com/scottluptowski/react-tweet-embed#f86552be371f7c2d0c0d4b0feaa5a980d36f26a5"
 
 react@^15.3.2:
   version "15.4.1"

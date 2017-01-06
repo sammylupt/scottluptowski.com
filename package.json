@@ -15,7 +15,7 @@
     "react-dom": "^15.3.2",
     "react-g-analytics": "^0.3.9",
     "react-router": "4.0.0-alpha.6",
-    "react-tweet-embed": "^1.0.3"
+    "react-tweet-embed": "git+ssh://git@github.com/scottluptowski/react-tweet-embed#master"
   },
   "scripts": {
     "start": "react-scripts-with-sass start",
