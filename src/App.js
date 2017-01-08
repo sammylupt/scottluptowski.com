@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Match, Miss } from 'react-router'
+import { Miss } from 'react-router'
+import Match from './components/Match'
 import { BrowserRouter } from 'react-g-analytics'
 import ReactDocumentTitle from 'react-document-title'
 
