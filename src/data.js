@@ -1,23 +1,24 @@
 // @flow
-
+import React from 'react'
 import type { Project, Link } from './types'
 
 const projects: Array<Project> = [
   {
     name: "Hamiltowned",
     slug: "hamiltowned",
-    summary: `
-      <div>
-        Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.
+    summary: () => {
+      return (
+        <div>
+          Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.
 
-
-        <div class="project-summary-block">
-          <div class="project-summary-callout">
-            "Best prank of 2016" - Gawker
+          <div className="project-summary-block">
+            <div className="project-summary-callout">
+              "Best prank of 2016" - Gawker
+            </div>
           </div>
         </div>
-      </div>
-    `,
+      )
+    },
     links: [
       { 
         url: "http://gawker.com/tricking-someone-into-believing-they-won-the-hamilton-l-1783463868",
@@ -62,11 +63,13 @@ const projects: Array<Project> = [
   {
     name: "Nicolas Cage Roulette",
     slug: "nicolas-cage-roulette",
-    summary: `
-      <div>
-        Nicolas Cage Roulette lets you stream random Nicolas Cage movies on Netflix. Just choose from 'Action Movies' or 'All Movies' and start watching.
-      </div>
-    `,
+    summary: () => {
+      return (
+        <div>
+          Nicolas Cage Roulette lets you stream random Nicolas Cage movies on Netflix. Just choose from 'Action Movies' or 'All Movies' and start watching.
+        </div>
+      )
+    },
     links: [
       {
         url: "http://www.nicolascageroulette.com",
@@ -103,15 +106,17 @@ const projects: Array<Project> = [
   {
     name: "Browse With Guy",
     slug: "browse-with-guy",
-    summary: `
-      <div>
-        Browse With Guy is a Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri. It was built for the <a href="http://www.stupidhackathon.com/" target="_blank">2016 Stupid Shit No One Needs and Terrible Ideas Hackathon</a>.
+    summary: () => {
+      return (
+        <div>
+          Browse With Guy is a Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri. It was built for the <a href="http://www.stupidhackathon.com/" target="_blank">2016 Stupid Shit No One Needs and Terrible Ideas Hackathon</a>.
 
-        <div class="project-summary-block">
-          <a href="https://chrome.google.com/webstore/detail/browse-with-guy/pffcpolokheijlggcplcbkadpgkhmomj/reviews?hl=en-US" target="_blank">Download on the Chrome Store</a>
+          <div className="project-summary-block">
+            <a href="https://chrome.google.com/webstore/detail/browse-with-guy/pffcpolokheijlggcplcbkadpgkhmomj/reviews?hl=en-US" target="_blank">Download on the Chrome Store</a>
+          </div>
         </div>
-      </div>
-    `,
+      )
+    },
     links: [
       {
         url: "http://nymag.com/following/2016/02/stupid-hackathon-actually-very-good-and-funny.html",
@@ -136,11 +141,13 @@ const projects: Array<Project> = [
   {
     name: "SVU EBooks",
     slug: "svu-ebooks",
-    summary: `
-      <div>
-        SVU EBooks is a series of fake Law and Order SVU episode summaries I generated. I gathered the summary of every SVU episode from Hulu, IMDb, and Rotten Tomatoes, and used a Markov Chain library to predict new episodes.
-      </div>
-    `,
+    summary: () => {
+      return (
+        <div>
+          SVU EBooks is a series of fake Law and Order SVU episode summaries I generated. I gathered the summary of every SVU episode from Hulu, IMDb, and Rotten Tomatoes, and used a Markov Chain library to predict new episodes.
+        </div>
+      )
+    },
     links: [
       {
         url: "http://mashable.com/2017/01/03/law-and-order-svu-episode-generator/",
@@ -160,21 +167,51 @@ const projects: Array<Project> = [
     ]
   },
   {
+    name: "Trump Siren",
+    slug: "trump-siren",
+    summary: () => {
+      return (
+        <div>
+          Built with <a href="https://twitter.com/ianrsolano" target="_blank">Ian Solano</a>, Trump Siren is an Arduino connected to a police siren that turns on and spins every time Donald Trump sends a tweet.
+        </div>
+      )
+    },
+    links: [
+      {
+        url: "https://github.com/scottluptowski/trump-siren",
+        title: "View source on GitHub"
+      }
+    ],
+    featuredImage: {
+      src: "trump-siren/preview.png",
+      alt: "Trump Siren"
+    },
+    images: [
+      {
+        src: "trump-siren/preview.png",
+        alt: "Trump Siren",
+        description: "Trump Siren spins for five seconds every time Donald Trump sends a tweet"
+      }
+    ]
+  },
+  {
     name: "Standings",
     slug: "standings",
-    summary: `
-      <div>
-        Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.
-        <div class="project-summary-block">
-          To install, run the following command from your shell:
-          <div class="code-block">
-            <code>
-              $ gem install standings
-            </code>
+    summary: () => {
+      return (
+        <div>
+          Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.
+          <div className="project-summary-block">
+            To install, run the following command from your shell:
+            <div className="code-block">
+              <code>
+                $ gem install standings
+              </code>
+            </div>
           </div>
         </div>
-      </div>
-    `,
+      )
+    },
     links: [
       {
         url: "https://rubygems.org/gems/standings",
@@ -199,16 +236,18 @@ const projects: Array<Project> = [
   {
     name: "New York Times or Jenny Holzer?",
     slug: "new-york-times-or-jenny-holzer",
-    summary: `
-      <div>
-        <p>
-        This is a guessing game between random text snippets from the work of Jenny Holzer and tweets from the New York Times Minus Context twitter account.
-        </p>
-        <p>
-        Built with React and hosted on AWS S3, this is also the first (and only!) app I've built with Alt.
-        </p>
-      </div>
-    `,
+    summary: () => {
+      return (
+        <div>
+          <p>
+          This is a guessing game between random text snippets from the work of Jenny Holzer and tweets from the New York Times Minus Context twitter account.
+          </p>
+          <p>
+          Built with React and hosted on AWS S3, this is also the first (and only!) app I've built with Alt.
+          </p>
+        </div>
+      )
+    },
     links: [
       {
         url: "http://www.newyorktimesorjennyholzer.com",
@@ -233,12 +272,14 @@ const projects: Array<Project> = [
   {
     name: "spoil.rs",
     slug: "spoilrs",
-    summary: `
-      <div>
-        <p>Spoil.rs was a spoiler tag for Twitter. It was a way to embed a hidden spoiler in your tweets so you don't ruin TV and movies for others. Users would type in a tweet and a secret, and Spoil.rs would post the tweet with a link to see the secret.</p>
-        <p>The site was up for a few months in Summer 2013. Spoil.rs was built with the LAMP stack.</p>
-      </div>
-    `,
+    summary: () => {
+      return (
+        <div>
+          <p>Spoil.rs was a spoiler tag for Twitter. It was a way to embed a hidden spoiler in your tweets so you don't ruin TV and movies for others. Users would type in a tweet and a secret, and Spoil.rs would post the tweet with a link to see the secret.</p>
+          <p>The site was up for a few months in Summer 2013. Spoil.rs was built with the LAMP stack.</p>
+        </div>
+      )
+    },
     links: [
       {
         url: "http://www.forbes.com/sites/ewanspence/2013/05/28/tweeting-out-spoilers-without-spoiling-the-fun",

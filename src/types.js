@@ -3,7 +3,7 @@
 export type Project = {
   name: string,
   slug: string,
-  summary: string,
+  summary: () => React$Element<any>,
   links: Array<ProjectLink>,
   featuredImage: ImageWithMeta,
   images?: Array<ImageWithMeta>,
