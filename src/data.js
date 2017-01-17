@@ -39,7 +39,7 @@ const projects: Array<Project> = [
       }
     ],
     featuredImage: {
-      src: "hamiltowned/preview.png",
+      src: "hamiltowned/preview.jpg",
       alt: "Hamiltowned"
     },
     images: [
@@ -159,7 +159,7 @@ const projects: Array<Project> = [
       }
     ],
     featuredImage: {
-      src: "svu-ebooks/preview.png",
+      src: "svu-ebooks/preview.jpg",
       alt: "SVU Ebooks"
     },
     tweets: [
@@ -183,7 +183,7 @@ const projects: Array<Project> = [
       }
     ],
     featuredImage: {
-      src: "trump-siren/preview.png",
+      src: "trump-siren/preview.jpg",
       alt: "Trump Siren"
     },
     images: [
