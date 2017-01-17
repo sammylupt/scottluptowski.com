@@ -29,13 +29,10 @@ class ProjectPage extends Component {
 
         <ProjectLinkSection links={links} />
 
-        { images &&
-          <ProjectImageList images={images} />
-        }
+        { images && <ProjectImageList images={images} /> }
 
-        { tweets &&
-          <ProjectTweetSection tweets={tweets} />
-        }
+        { tweets && <ProjectTweetSection tweets={tweets} /> }
+
       </div>
     )
   }
