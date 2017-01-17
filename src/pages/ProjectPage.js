@@ -23,9 +23,9 @@ class ProjectPage extends Component {
         />
 
         <p className="project-header">{name}</p>
-        <p className="project-summary">
+        <div className="project-summary">
            { summary() }
-        </p>
+        </div>
 
         <ProjectLinkSection links={links} />
 
