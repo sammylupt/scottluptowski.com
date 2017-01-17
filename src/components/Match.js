@@ -1,24 +1,27 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Match, propTypes } from 'react-router'
+import { Match as ReactRouterMatch, propTypes } from 'react-router'
 
-class MatchWrapper extends Component {
+const scrollToTop = () => {
+  window.scrollTo(0, 0)
+}
 
+let historyListener = null
+
+class Match extends Component {
 
   static contextTypes = {
     history: propTypes.historyContext.isRequired
   }
 
-  historyUnlisten: () => void
-
   componentDidMount() {
-    const { context } = this
-    this.historyUnlisten = context.history.listen(() => this.scrollToTop())
+    const { history } = this.context
+    historyListener || (historyListener = history.listen(scrollToTop))
   }
 
   componentWillUnmount() {
-    this.historyUnlisten()
+    historyListener = null
   }
 
   scrollToTop() {
@@ -26,8 +29,8 @@ class MatchWrapper extends Component {
   }
 
   render() {
-    return <Match {...this.props} />
+    return <ReactRouterMatch {...this.props} />
   }
 }
 
-export default MatchWrapper
+export default Match
