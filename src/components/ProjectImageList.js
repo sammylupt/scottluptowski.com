@@ -15,21 +15,21 @@ class ProjectImageList extends Component {
     const { images } = this.props;
 
     return (
-      <div className="project-images">
+      <div>
         {
           images.map((image: ImageWithMeta, i: number) => {
             const { description, ...rest } = image
 
             return (
-              <div className="project-image" key={i}>
+              <ProjectImage>
                 <Image {...rest} />
 
                 { image.description &&
-                  <div className="project-image-description">
+                  <ProjectImageDescription>
                     {description}
-                  </div>
+                  </ProjectImageDescription>
                 }
-              </div>
+              </ProjectImage>
             )
           })
         }
@@ -37,5 +37,25 @@ class ProjectImageList extends Component {
     )
   }
 }
+
+const ProjectImage = s.div`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+  max-width: 95%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+`
+
+const ProjectImageDescription = s.div`
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .8em;
+  margin: .5em 0 1em;
+  color: #999999;
+`
+
 
 export default ProjectImageList

@@ -18,12 +18,12 @@ class ProjectLinkSection extends Component {
 
         { links.map((link: ProjectLink, i: number) => {
             return (
-              <div key={i} className="project-link">
+              <ProjectLinkListing div key={i}>
                 <a href={link.url} target="_blank">{link.title}</a>
                 { link.meta &&
-                  <span className="link-meta">{link.meta}</span>
+                  <LinkMeta>{link.meta}</LinkMeta>
                 }
-              </div>
+              </ProjectLinkListing>
             )
           })
         }
@@ -32,4 +32,18 @@ class ProjectLinkSection extends Component {
   }
 }
 
+const ProjectLinkListing = s.div`
+  margin-bottom: 0.25em
+`
+
+const LinkMeta = s.span`
+  margin-left: .25em;
+
+  @media (max-width: 800px) {
+    display: block;
+    font-size: .75em;
+  }
+`
+
 export default ProjectLinkSection
+
