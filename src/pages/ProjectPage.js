@@ -23,9 +23,9 @@ class ProjectPage extends Component {
         />
 
         <p className="project-header">{name}</p>
-        <p className="project-summary"
-           dangerouslySetInnerHTML={{__html: summary}}
-        />
+        <p className="project-summary">
+           { summary() }
+        </p>
 
         <ProjectLinkSection links={links} />
 
