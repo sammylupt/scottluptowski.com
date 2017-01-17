@@ -188,7 +188,7 @@ const projects: Array<Project> = [
     },
     images: [
       {
-        src: "trump-siren/preview.png",
+        src: "trump-siren/trump-siren.gif",
         alt: "Trump Siren",
         description: "Trump Siren spins for five seconds every time Donald Trump sends a tweet"
       }
