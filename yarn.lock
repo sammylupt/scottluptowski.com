@@ -4464,10 +4464,6 @@ react-tweet-embed@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-tweet-embed/-/react-tweet-embed-1.0.3.tgz#05b1dac46cea1e3bd8ccae596d60d72568677f36"
 
-"react-tweet-embed@git+ssh://git@github.com/scottluptowski/react-tweet-embed#master":
-  version "1.0.3"
-  resolved "git+ssh://git@github.com/scottluptowski/react-tweet-embed#29bbe71a681132fc11dce4ef85df5aa6d42e1abd"
-
 react@^15.3.2:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"

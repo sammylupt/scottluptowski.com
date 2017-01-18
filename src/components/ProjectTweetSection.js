@@ -17,10 +17,7 @@ class ProjectTweetSection extends Component {
         { tweets.map((tweet: string, i: number) => {
           return (
             <div className="tweet-wrapper" key={i}>
-              <TweetEmbed id={tweet} key={i} preview={
-                <div className="tweet-loading">Loading Tweet...</div>
-              }
-              />
+              <TweetEmbed id={tweet} />
             </div>
           )
           })
