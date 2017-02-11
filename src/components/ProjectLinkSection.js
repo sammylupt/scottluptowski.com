@@ -1,6 +1,8 @@
 // @flow
 
 import React, { Component } from 'react'
+import s from 'styled-components'
+
 import type { ProjectLink } from '../types'
 
 class ProjectLinkSection extends Component {
@@ -13,12 +15,12 @@ class ProjectLinkSection extends Component {
     const { links } = this.props
 
     return (
-      <div className="project-links">
+      <ProjectLinkContainer>
         <div>Links:</div>
 
         { links.map((link: ProjectLink, i: number) => {
             return (
-              <ProjectLinkListing div key={i}>
+              <ProjectLinkListing key={i}>
                 <a href={link.url} target="_blank">{link.title}</a>
                 { link.meta &&
                   <LinkMeta>{link.meta}</LinkMeta>
@@ -27,10 +29,14 @@ class ProjectLinkSection extends Component {
             )
           })
         }
-      </div>
+      </ProjectLinkContainer>
     )
   }
 }
+
+const ProjectLinkContainer = s.div`
+  margin-bottom: 2em;
+`
 
 const ProjectLinkListing = s.div`
   margin-bottom: 0.25em

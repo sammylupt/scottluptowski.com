@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import ReactDocumentTitle from 'react-document-title'
+import s from 'styled-components'
 
 import ProjectImageList from '../components/ProjectImageList'
 import ProjectLinkSection from '../components/ProjectLinkSection'
@@ -17,12 +18,12 @@ class ProjectPage extends Component {
     const pageTitle = `Scott Luptowski | Projects | ${name}`
 
     return (
-      <div className="project-page">
+      <ProjectPageWrapper>
         <ReactDocumentTitle
           title={pageTitle}
         />
 
-        <p className="project-header">{name}</p>
+        <Header>{name}</Header>
         <div className="project-summary">
            { summary() }
         </div>
@@ -33,9 +34,18 @@ class ProjectPage extends Component {
 
         { tweets && <ProjectTweetSection tweets={tweets} /> }
 
-      </div>
+      </ProjectPageWrapper>
     )
   }
 }
 
 export default ProjectPage
+
+const ProjectPageWrapper = s.div`
+  text-align: center;
+  margin: 0 auto;
+`
+const Header = s.p`
+  font-size: 1.5em;
+  margin: 1em auto;
+`

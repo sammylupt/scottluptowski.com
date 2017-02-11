@@ -5,6 +5,7 @@ import { Miss } from 'react-router'
 import Match from './components/Match'
 import { BrowserRouter } from 'react-g-analytics'
 import ReactDocumentTitle from 'react-document-title'
+import s from 'styled-components'
 
 import Menu from './components/Menu'
 import ProjectListPage from './pages/ProjectListPage'
@@ -33,12 +34,12 @@ class App extends Component {
     return (
       <BrowserRouter id="UA-7600440-11">
         <div className="app-wrapper">
-          <div className="app-content">
+          <div>
             <ReactDocumentTitle
               title="Scott Luptowski"
             />
             <Menu />
-            <div className="route-container">
+            <RouteCountainer>
               <Match
                 exactly
                 pattern="/"
@@ -46,7 +47,7 @@ class App extends Component {
               />
               <Match
                 pattern="/about"
-                component={AboutPage}
+                render={() => <AboutPage/>}
               />
               <Match
                 pattern="/posts"
@@ -61,7 +62,7 @@ class App extends Component {
                 render={() => <ContactPage links={links} />}
               />
               <Miss component={PageNotFound} />
-            </div>
+            </RouteCountainer>
           </div>
           <footer>
             © 2017 Scott Luptowski
@@ -73,3 +74,14 @@ class App extends Component {
 }
 
 export default App
+
+const RouteCountainer = s.div`
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+
+  @media (max-width: 800px) {
+    width: 95%;
+  }
+}
+`

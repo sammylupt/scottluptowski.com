@@ -2,8 +2,9 @@
 
 import React, { Component } from 'react'
 import ReactDocumentTitle from 'react-document-title'
+import s from 'styled-components'
 
-class About extends Component {
+class AboutPage extends Component {
 
   render() {
     return (
@@ -16,24 +17,55 @@ class About extends Component {
         <p>From Atlanta, I'm now living in Brooklyn after stints in Chicago and Sweden.</p>
 
         <p>My languages of choice are Ruby, JavaScript, Elixir, and Clojure. When I'm AFK I enjoy travel, food, live music, and bike riding.</p>
-
-        <div className="quote-section">
-          <div className="press-quote">
+        <QuoteSection>
+          <PressQuote>
             "Enjoys both pop culture and looking at tweets"
-            <div className="press-attribution">BuzzFeed</div>
-            </div>
-          <div className="press-quote">
+            <cite>BuzzFeed</cite>
+            </PressQuote>
+          <PressQuote>
             "This guy"
-            <div className="press-attribution">Gawker</div>
-            </div>
-          <div className="press-quote">
+            <cite>Gawker</cite>
+            </PressQuote>
+          <PressQuote>
             "A JavaScript ninja who wants to be on the bleeding edge of technology"
-            <div className="press-attribution">Unsolicited recruiter message on LinkedIn</div>
-            </div>
-        </div>
+            <cite>Unsolicited recruiter message on LinkedIn</cite>
+            </PressQuote>
+        </QuoteSection>
       </div>
     )
   }
 }
 
-export default About
+const PressQuote = s.blockquote`
+  margin-bottom: 1em;
+
+  cite {
+    display: block;
+    padding-left: 2em;
+    font-weight: bold;
+    font-style: italic;
+
+    &:before {
+      content: "- ";
+    }
+
+    @media (max-width: 800px) {
+      padding-left: 1em;
+    }
+  }
+}
+`
+
+const QuoteSection = s.div`
+  padding-top: 1em;
+
+  &:before {
+    content: "*******";
+    display: block;
+    font-size: 1.5em;
+    margin: 0 auto 1em;
+    text-align: center;
+  }
+`
+
+export default AboutPage

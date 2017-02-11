@@ -2,6 +2,8 @@
 
 import React, { Component } from 'react'
 import ProjectPreview from "../components/ProjectPreview"
+import s from 'styled-components'
+
 import type { Project } from "../types"
 
 class ProjectList extends Component {
@@ -15,8 +17,10 @@ class ProjectList extends Component {
 
     return (
       <div>
-        <p className="title-description">Software Developer & Creative Technologist in <span className="nowrap">New York City</span></p>
-        <div className="project-listings">
+        <Title>
+          Software Developer & Creative Technologist in <Nowrap>New York City</Nowrap>
+        </Title>
+        <ProjectListingsContainer>
           {
             projects.map((project: Project, i: number) => {
               return (
@@ -26,10 +30,32 @@ class ProjectList extends Component {
                 />)
             })
           }
-        </div>
+        </ProjectListingsContainer>
       </div>
     )
   }
 }
 
 export default ProjectList
+
+const Nowrap = s.span`
+  white-space: nowrap;
+`
+
+const Title = s.p`
+  background-color: #cccccc;
+  padding: 1em;
+  margin: 1em auto;
+  text-align: center;
+  font-size: 1.25em;
+  border: 1px solid black;
+`
+
+const ProjectListingsContainer = s.div`
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+`

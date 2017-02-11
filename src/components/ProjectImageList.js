@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
+import s from 'styled-components'
 
 import Image from './Image'
 import type { ImageWithMeta } from '../types'
