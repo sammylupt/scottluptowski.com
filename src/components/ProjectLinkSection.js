@@ -35,6 +35,7 @@ class ProjectLinkSection extends Component {
 }
 
 const ProjectLinkContainer = s.div`
+  margin-top: 1em;
   margin-bottom: 2em;
 `
 

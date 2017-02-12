@@ -19,9 +19,12 @@ class ContactPage extends Component {
         <ReactDocumentTitle
           title="Scott Luptowski | Contact"
         />
-        <p>Get in touch:</p>
 
-        <ItemList links={links} />
+        <ItemList
+          header={
+            <p>Get in touch:</p>
+          }
+          links={links} />
       </div>
     )
   }

@@ -7,14 +7,19 @@ import s from 'styled-components'
 class ItemList extends Component {
 
   props: {
-    links: Array<Link>
+    links: Array<Link>,
+    header: React$Element<any>
   }
 
   render() {
-    const { links } = this.props
+    const { links, header } = this.props
 
     return (
       <div>
+        <HeaderWrapper>
+          {header}
+        </HeaderWrapper>
+
         {
           links.map((link: Link, i: number) => {
             return (
@@ -32,6 +37,10 @@ class ItemList extends Component {
     )
   }
 }
+
+const HeaderWrapper = s.div`
+  margin-bottom: 1em;
+`
 
 const ItemLink = s.a`
   display: block;

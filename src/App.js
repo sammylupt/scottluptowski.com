@@ -33,37 +33,35 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter id="UA-7600440-11">
-        <div className="app-wrapper">
-          <div style={{flex: 1}}>
-            <ReactDocumentTitle
-              title="Scott Luptowski"
+        <div>
+          <ReactDocumentTitle
+            title="Scott Luptowski"
+          />
+          <Menu />
+          <RouteCountainer>
+            <Match
+              exactly
+              pattern="/"
+              render={() => <ProjectListPage projects={projects}/>}
             />
-            <Menu />
-            <RouteCountainer>
-              <Match
-                exactly
-                pattern="/"
-                render={() => <ProjectListPage projects={projects}/>}
-              />
-              <Match
-                pattern="/about"
-                render={() => <AboutPage/>}
-              />
-              <Match
-                pattern="/posts"
-                render={() => <PostsPage posts={posts} />}
-              />
-              <Match
-                pattern="/projects/:project"
-                render={renderProjectOrMiss}
-              />
-              <Match
-                pattern="/contact"
-                render={() => <ContactPage links={links} />}
-              />
-              <Miss component={PageNotFound} />
-            </RouteCountainer>
-          </div>
+            <Match
+              pattern="/about"
+              render={() => <AboutPage/>}
+            />
+            <Match
+              pattern="/posts"
+              render={() => <PostsPage posts={posts} />}
+            />
+            <Match
+              pattern="/projects/:project"
+              render={renderProjectOrMiss}
+            />
+            <Match
+              pattern="/contact"
+              render={() => <ContactPage links={links} />}
+            />
+            <Miss component={PageNotFound} />
+          </RouteCountainer>
           <Footer>
             © 2017 Scott Luptowski
           </Footer>
@@ -83,12 +81,10 @@ const RouteCountainer = s.div`
   @media (max-width: 800px) {
     width: 95%;
   }
-}
 `
 
-const Footer = s.div`
+const Footer = s.footer`
   font-size: .7em;
-  color: red;
   text-align: center;
   margin: 2em auto 1em;
   padding-bottom: .5em;

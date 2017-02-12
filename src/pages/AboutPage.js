@@ -8,7 +8,7 @@ class AboutPage extends Component {
 
   render() {
     return (
-      <div className="section-header">
+      <AboutContainer>
         <ReactDocumentTitle
           title="Scott Luptowski | About"
         />
@@ -31,10 +31,16 @@ class AboutPage extends Component {
             <cite>Unsolicited recruiter message on LinkedIn</cite>
             </PressQuote>
         </QuoteSection>
-      </div>
+      </AboutContainer>
     )
   }
 }
+
+const AboutContainer = s.div`
+  p {
+    margin-bottom: 1em;
+  }
+`
 
 const PressQuote = s.blockquote`
   margin-bottom: 1em;

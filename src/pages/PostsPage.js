@@ -19,9 +19,13 @@ class PostsPage extends Component {
         <ReactDocumentTitle
           title="Scott Luptowski | Posts"
         />
-        <p>Here are some links to posts I've written about software development:</p>
 
-        <ItemList links={posts} />
+        <ItemList
+          header={
+            <p>Here are some links to posts I've written about software development:</p>
+          }
+          links={posts}
+          />
       </div>
     )
   }

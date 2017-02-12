@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import type { Project, Link } from './types'
+import s from 'styled-components'
 
 const projects: Array<Project> = [
   {
@@ -9,13 +10,11 @@ const projects: Array<Project> = [
     summary: () => {
       return (
         <div>
-          Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.
+          <p>Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.</p>
 
-          <div className="project-summary-block">
-            <div className="project-summary-callout">
-              "Best prank of 2016" - Gawker
-            </div>
-          </div>
+          <Featured light={true}>
+            "Best prank of 2016" - Gawker
+          </Featured>
         </div>
       )
     },
@@ -109,11 +108,11 @@ const projects: Array<Project> = [
     summary: () => {
       return (
         <div>
-          Browse With Guy is a Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri. It was built for the <a href="http://www.stupidhackathon.com/" target="_blank">2016 Stupid Shit No One Needs and Terrible Ideas Hackathon</a>.
+          <p>Browse With Guy is a Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri. It was built for the <a href="http://www.stupidhackathon.com/" target="_blank">2016 Stupid Shit No One Needs and Terrible Ideas Hackathon</a>.</p>
 
-          <div className="project-summary-block">
+          <p>
             <a href="https://chrome.google.com/webstore/detail/browse-with-guy/pffcpolokheijlggcplcbkadpgkhmomj/reviews?hl=en-US" target="_blank">Download on the Chrome Store</a>
-          </div>
+          </p>
         </div>
       )
     },
@@ -200,15 +199,11 @@ const projects: Array<Project> = [
     summary: () => {
       return (
         <div>
-          Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.
-          <div className="project-summary-block">
-            To install, run the following command from your shell:
-            <div className="code-block">
-              <code>
-                $ gem install standings
-              </code>
-            </div>
-          </div>
+          <p>Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.</p>
+          <p>To install, run the following command from your shell:</p>
+          <Featured dark={true}>
+            $ gem install standings
+          </Featured>
         </div>
       )
     },
@@ -350,5 +345,12 @@ const links: Array<Link> = [
     url: "https://www.linkedin.com/in/scottluptowski",
   }
 ]
+
+const Featured = s.div`
+  display: inline-block;
+  padding: .5em;
+  background-color: ${props => props.light ? "#c0ffee" : "black"};
+  color: ${props => props.light ? "black" : "white"};
+`
 
 export { projects, posts, links }

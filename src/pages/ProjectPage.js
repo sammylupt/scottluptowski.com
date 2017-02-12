@@ -24,9 +24,8 @@ class ProjectPage extends Component {
         />
 
         <Header>{name}</Header>
-        <div className="project-summary">
-           { summary() }
-        </div>
+
+        { summary() }
 
         <ProjectLinkSection links={links} />
 
@@ -44,8 +43,13 @@ export default ProjectPage
 const ProjectPageWrapper = s.div`
   text-align: center;
   margin: 0 auto;
+
+  p {
+    margin-bottom: 1em;
+  }
 `
-const Header = s.p`
+const Header = s.h2`
+  font-weight: normal;
   font-size: 1.5em;
   margin: 1em auto;
 `

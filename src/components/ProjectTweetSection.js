@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import TweetEmbed from 'react-tweet-embed'
+import s from 'styled-components';
 
 class ProjectTweetSection extends Component {
 
@@ -16,9 +17,9 @@ class ProjectTweetSection extends Component {
       <div>
         { tweets.map((tweet: string, i: number) => {
           return (
-            <div className="tweet-wrapper" key={i}>
+            <TweetWrapper key={i}>
               <TweetEmbed id={tweet} />
-            </div>
+            </TweetWrapper>
           )
           })
         }
@@ -26,5 +27,12 @@ class ProjectTweetSection extends Component {
     )
   }
 }
+
+const TweetWrapper = s.div`
+  // this class is added dynamically by calling Twitter's js
+  .twitter-tweet {
+    margin: 0 auto 2em !important;
+  }
+`
 
 export default ProjectTweetSection

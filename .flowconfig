@@ -3,3 +3,4 @@
 
 [ignore]
 .*/node_modules/react-side-effect/
+.*/node_modules/styled-components/
