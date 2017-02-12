@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <BrowserRouter id="UA-7600440-11">
         <div className="app-wrapper">
-          <div>
+          <div style={{flex: 1}}>
             <ReactDocumentTitle
               title="Scott Luptowski"
             />
@@ -64,9 +64,9 @@ class App extends Component {
               <Miss component={PageNotFound} />
             </RouteCountainer>
           </div>
-          <footer>
+          <Footer>
             © 2017 Scott Luptowski
-          </footer>
+          </Footer>
         </div>
       </BrowserRouter>
     )
@@ -84,4 +84,12 @@ const RouteCountainer = s.div`
     width: 95%;
   }
 }
+`
+
+const Footer = s.div`
+  font-size: .7em;
+  color: red;
+  text-align: center;
+  margin: 2em auto 1em;
+  padding-bottom: .5em;
 `

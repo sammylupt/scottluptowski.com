@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import type { Link } from '../types'
 import ReactDocumentTitle from 'react-document-title'
+import ItemList from '../components/ItemList'
 
 class ContactPage extends Component {
 
@@ -19,17 +20,8 @@ class ContactPage extends Component {
           title="Scott Luptowski | Contact"
         />
         <p>Get in touch:</p>
-        {
-          links.map((link: Link, i: number) => {
-            return (
-              <div className="item-link" key={i}>
-                <a target="_blank" href={link.url}>
-                  {link.title}
-                </a>
-              </div>
-            )
-          })
-        }
+
+        <ItemList links={links} />
       </div>
     )
   }
