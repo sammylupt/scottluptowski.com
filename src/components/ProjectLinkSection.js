@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 import type { ProjectLink } from '../types'
 
@@ -34,16 +34,16 @@ class ProjectLinkSection extends Component {
   }
 }
 
-const ProjectLinkContainer = s.div`
+const ProjectLinkContainer = styled.div`
   margin-top: 1em;
   margin-bottom: 2em;
 `
 
-const ProjectLinkListing = s.div`
+const ProjectLinkListing = styled.div`
   margin-bottom: 0.25em
 `
 
-const LinkMeta = s.span`
+const LinkMeta = styled.span`
   margin-left: .25em;
 
   @media (max-width: 800px) {
@@ -53,4 +53,3 @@ const LinkMeta = s.span`
 `
 
 export default ProjectLinkSection
-

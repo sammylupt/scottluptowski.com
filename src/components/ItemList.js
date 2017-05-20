@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import type { Link } from '../types'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 class ItemList extends Component {
 
@@ -38,11 +38,11 @@ class ItemList extends Component {
   }
 }
 
-const HeaderWrapper = s.div`
+const HeaderWrapper = styled.div`
   margin-bottom: 1em;
 `
 
-const ItemLink = s.a`
+const ItemLink = styled.a`
   display: block;
   margin-bottom: 1em;
 `

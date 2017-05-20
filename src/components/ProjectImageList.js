@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 import Image from './Image'
 import type { ImageWithMeta } from '../types'
@@ -39,7 +39,7 @@ class ProjectImageList extends Component {
   }
 }
 
-const ProjectImage = s.div`
+const ProjectImage = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -51,12 +51,11 @@ const ProjectImage = s.div`
   }
 `
 
-const ProjectImageDescription = s.div`
+const ProjectImageDescription = styled.div`
   font-family: Helvetica, Arial, sans-serif;
   font-size: .8em;
   margin: .5em 0 1em;
   color: #999999;
 `
-
 
 export default ProjectImageList

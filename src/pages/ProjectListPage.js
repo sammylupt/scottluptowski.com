@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import ProjectPreview from "../components/ProjectPreview"
-import s from 'styled-components'
+import styled from 'styled-components'
 
 import type { Project } from "../types"
 
@@ -38,11 +38,11 @@ class ProjectList extends Component {
 
 export default ProjectList
 
-const Nowrap = s.span`
+const Nowrap = styled.span`
   white-space: nowrap;
 `
 
-const Title = s.p`
+const Title = styled.p`
   background-color: #cccccc;
   padding: 1em;
   margin: 1em auto;
@@ -51,7 +51,7 @@ const Title = s.p`
   border: 1px solid black;
 `
 
-const ProjectListingsContainer = s.div`
+const ProjectListingsContainer = styled.div`
   display: flex;
   flex: 1;
   flex-wrap: wrap;

@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import ReactDocumentTitle from 'react-document-title'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 class AboutPage extends Component {
 
@@ -36,13 +36,13 @@ class AboutPage extends Component {
   }
 }
 
-const AboutContainer = s.div`
+const AboutContainer = styled.div`
   p {
     margin-bottom: 1em;
   }
 `
 
-const PressQuote = s.blockquote`
+const PressQuote = styled.blockquote`
   margin-bottom: 1em;
 
   cite {
@@ -62,7 +62,7 @@ const PressQuote = s.blockquote`
 }
 `
 
-const QuoteSection = s.div`
+const QuoteSection = styled.div`
   padding-top: 1em;
 
   &:before {

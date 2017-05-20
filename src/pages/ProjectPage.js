@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import ReactDocumentTitle from 'react-document-title'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 import ProjectImageList from '../components/ProjectImageList'
 import ProjectLinkSection from '../components/ProjectLinkSection'
@@ -40,7 +40,7 @@ class ProjectPage extends Component {
 
 export default ProjectPage
 
-const ProjectPageWrapper = s.div`
+const ProjectPageWrapper = styled.div`
   text-align: center;
   margin: 0 auto;
 
@@ -48,7 +48,7 @@ const ProjectPageWrapper = s.div`
     margin-bottom: 1em;
   }
 `
-const Header = s.h2`
+const Header = styled.h2`
   font-weight: normal;
   font-size: 1.5em;
   margin: 1em auto;

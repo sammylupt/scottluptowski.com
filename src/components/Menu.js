@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 import { Link } from 'react-router'
 
@@ -20,7 +20,7 @@ class Menu extends Component {
 
 export default Menu
 
-const MenuHeader = s.header`
+const MenuHeader = styled.header`
   padding-top: 1em;
   padding-bottom: .5em;
   margin-bottom: 1em;
@@ -28,7 +28,7 @@ const MenuHeader = s.header`
   text-align: center;
 `
 
-const BaseLink = s(Link)`
+const BaseLink = styled(Link)`
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -38,13 +38,13 @@ const BaseLink = s(Link)`
   }
 `
 
-const MainLink = s(BaseLink)`
+const MainLink = styled(BaseLink)`
   font-size: 30px;
   margin: 0 auto 0.1em;
   display: block;
 `
 
-const NavLink = s(BaseLink)`
+const NavLink = styled(BaseLink)`
   margin-right: 1em;
   padding: .25em;
 

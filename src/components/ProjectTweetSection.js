@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import TweetEmbed from 'react-tweet-embed'
-import s from 'styled-components';
+import styled from 'styled-components';
 
 class ProjectTweetSection extends Component {
 
@@ -28,7 +28,7 @@ class ProjectTweetSection extends Component {
   }
 }
 
-const TweetWrapper = s.div`
+const TweetWrapper = styled.div`
   // this class is added dynamically by calling Twitter's js
   .twitter-tweet {
     margin: 0 auto 2em !important;

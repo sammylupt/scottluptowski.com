@@ -5,7 +5,7 @@
   "homepage": "http://www.scottluptowski.com",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.8.3"
+    "react-scripts": "1.0.1"
   },
   "dependencies": {
     "history": "^4.2.0",
@@ -15,7 +15,7 @@
     "react-g-analytics": "^0.3.9",
     "react-router": "4.0.0-alpha.6",
     "react-tweet-embed": "^1.0.3",
-    "styled-components": "^1.4.3"
+    "styled-components": "=2.0.0-17"
   },
   "scripts": {
     "start": "react-scripts start",

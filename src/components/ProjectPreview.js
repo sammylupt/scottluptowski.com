@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 import Image from '../components/Image'
 import type { Project } from '../types'
@@ -27,7 +27,7 @@ class ProjectPreview extends Component {
   }
 }
 
-const ProjectPreviewBlock = s.div`
+const ProjectPreviewBlock = styled.div`
   max-width: 400px;
   margin: 0 auto 2em;
 
