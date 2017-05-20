@@ -7,24 +7,16 @@ import styled from 'styled-components'
 import Image from '../components/Image'
 import type { Project } from '../types'
 
-class ProjectPreview extends Component {
-  props: Project
-
-  render() {
-    const { slug, name, featuredImage } = this.props
-
-    return (
-      <ProjectPreviewBlock>
-        <Link to={`/projects/${slug}`}>
-          <div>
-            <Image {...featuredImage} />
-            <div>{name}</div>
-          </div>
-        </Link>
-      </ProjectPreviewBlock>
-    )
-  }
-}
+const ProjectPreview = ({ slug, name, featuredImage }: Project) => (
+  <ProjectPreviewBlock>
+    <Link to={`/projects/${slug}`}>
+      <div>
+        <Image {...featuredImage} />
+        <div>{name}</div>
+      </div>
+    </Link>
+  </ProjectPreviewBlock>
+)
 
 const ProjectPreviewBlock = styled.div`
   max-width: 400px;

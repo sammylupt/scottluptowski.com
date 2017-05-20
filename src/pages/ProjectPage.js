@@ -9,31 +9,22 @@ import ProjectLinkSection from '../components/ProjectLinkSection'
 import ProjectTweetSection from '../components/ProjectTweetSection'
 import type { Project } from '../types'
 
-class ProjectPage extends Component {
-  props: Project
+const ProjectPage = ({ links, images, name, summary, tweets }: Project) => (
+  <ProjectPageWrapper>
+    <ReactDocumentTitle title={`Scott Luptowski | Projects | ${name}`} />
 
-  render() {
-    const { links, images, name, summary, tweets } = this.props
-    const pageTitle = `Scott Luptowski | Projects | ${name}`
+    <Header>{name}</Header>
 
-    return (
-      <ProjectPageWrapper>
-        <ReactDocumentTitle title={pageTitle} />
+    {summary()}
 
-        <Header>{name}</Header>
+    <ProjectLinkSection links={links} />
 
-        {summary()}
+    {images && <ProjectImageList images={images} />}
 
-        <ProjectLinkSection links={links} />
+    {tweets && <ProjectTweetSection tweets={tweets} />}
 
-        {images && <ProjectImageList images={images} />}
-
-        {tweets && <ProjectTweetSection tweets={tweets} />}
-
-      </ProjectPageWrapper>
-    )
-  }
-}
+  </ProjectPageWrapper>
+)
 
 export default ProjectPage
 

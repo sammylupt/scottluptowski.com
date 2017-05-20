@@ -1,33 +1,28 @@
 // @flow
 
-import React, { Component } from 'react'
+import React from 'react'
 import type { Link } from '../types'
 import styled from 'styled-components'
 
-class ItemList extends Component {
-  props: {
-    links: Array<Link>,
-    header: React$Element<any>
-  }
+const ItemList = ({
+  links,
+  header
+}: {
+  links: Array<Link>,
+  header: React$Element<any>
+}) => (
+  <div>
+    <HeaderWrapper>
+      {header}
+    </HeaderWrapper>
 
-  render() {
-    const { links, header } = this.props
-
-    return (
-      <div>
-        <HeaderWrapper>
-          {header}
-        </HeaderWrapper>
-
-        {links.map((link: Link, i: number) => (
-          <ItemLink key={i} href={link.url} target="_blank">
-            {link.title}
-          </ItemLink>
-        ))}
-      </div>
-    )
-  }
-}
+    {links.map((link: Link, i: number) => (
+      <ItemLink key={i} href={link.url} target="_blank">
+        {link.title}
+      </ItemLink>
+    ))}
+  </div>
+)
 
 const HeaderWrapper = styled.div`
   margin-bottom: 1em;

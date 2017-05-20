@@ -1,39 +1,58 @@
 // @flow
 
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import Image from './Image'
 import type { ImageWithMeta } from '../types'
 
-class ProjectImageList extends Component {
-  props: {
-    images: Array<ImageWithMeta>
-  }
+const ProjectImageList = ({ images }: { images: Array<ImageWithMeta> }) => (
+  <div>
+    {images.map((image: ImageWithMeta, i: number) => {
+      const { description, ...rest } = image
 
-  render() {
-    const { images } = this.props
+      return (
+        <ProjectImage>
+          <Image {...rest} />
 
-    return (
-      <div>
-        {images.map((image: ImageWithMeta, i: number) => {
-          const { description, ...rest } = image
+          {image.description &&
+            <ProjectImageDescription>
+              {description}
+            </ProjectImageDescription>}
+        </ProjectImage>
+      )
+    })}
+  </div>
+)
 
-          return (
-            <ProjectImage>
-              <Image {...rest} />
-
-              {image.description &&
-                <ProjectImageDescription>
-                  {description}
-                </ProjectImageDescription>}
-            </ProjectImage>
-          )
-        })}
-      </div>
-    )
-  }
-}
+// class ProjectImageList extends Component {
+//   props: {
+//     images: Array<ImageWithMeta>
+//   }
+//
+//   render() {
+//     const { images } = this.props
+//
+//     return (
+//       <div>
+//         {images.map((image: ImageWithMeta, i: number) => {
+//           const { description, ...rest } = image
+//
+//           return (
+//             <ProjectImage>
+//               <Image {...rest} />
+//
+//               {image.description &&
+//                 <ProjectImageDescription>
+//                   {description}
+//                 </ProjectImageDescription>}
+//             </ProjectImage>
+//           )
+//         })}
+//       </div>
+//     )
+//   }
+// }
 
 const ProjectImage = styled.div`
   display: block;

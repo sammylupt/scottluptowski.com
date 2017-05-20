@@ -1,21 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import { Link } from 'react-router'
 
-class Menu extends Component {
-  render() {
-    return (
-      <MenuHeader>
-        <MainLink to="/">Scott Luptowski</MainLink>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/posts">Posts</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </MenuHeader>
-    )
-  }
-}
+const Menu = () => (
+  <MenuHeader>
+    <MainLink to="/">Scott Luptowski</MainLink>
+    <NavLink to="/">Home</NavLink>
+    <NavLink to="/about">About</NavLink>
+    <NavLink to="/posts">Posts</NavLink>
+    <NavLink to="/contact">Contact</NavLink>
+  </MenuHeader>
+)
 
 export default Menu
 

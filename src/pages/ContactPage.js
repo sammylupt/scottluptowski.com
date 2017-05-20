@@ -5,22 +5,12 @@ import type { Link } from '../types'
 import ReactDocumentTitle from 'react-document-title'
 import ItemList from '../components/ItemList'
 
-class ContactPage extends Component {
-  props: {
-    links: Array<Link>
-  }
+const ContactPage = ({ links }: { links: Array<Link> }) => (
+  <div className="section-header">
+    <ReactDocumentTitle title="Scott Luptowski | Contact" />
 
-  render() {
-    const { links } = this.props
-
-    return (
-      <div className='section-header'>
-        <ReactDocumentTitle title='Scott Luptowski | Contact' />
-
-        <ItemList header={<p>Get in touch:</p>} links={links} />
-      </div>
-    )
-  }
-}
+    <ItemList header={<p>Get in touch:</p>} links={links} />
+  </div>
+)
 
 export default ContactPage

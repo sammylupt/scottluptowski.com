@@ -6,30 +6,20 @@ import styled from 'styled-components'
 
 import type { Project } from '../types'
 
-class ProjectList extends Component {
-  props: {
-    projects: Array<Project>
-  }
-
-  render() {
-    const { projects } = this.props
-
-    return (
-      <div>
-        <Title>
-          Software Developer & Creative Technologist in
-          {' '}
-          <Nowrap>New York City</Nowrap>
-        </Title>
-        <ProjectListingsContainer>
-          {projects.map((project: Project, i: number) => {
-            return <ProjectPreview key={i} {...project} />
-          })}
-        </ProjectListingsContainer>
-      </div>
-    )
-  }
-}
+const ProjectList = ({ projects }: { projects: Array<Project> }) => (
+  <div>
+    <Title>
+      Software Developer & Creative Technologist in
+      {' '}
+      <Nowrap>New York City</Nowrap>
+    </Title>
+    <ProjectListingsContainer>
+      {projects.map((project: Project, i: number) => {
+        return <ProjectPreview key={i} {...project} />
+      })}
+    </ProjectListingsContainer>
+  </div>
+)
 
 export default ProjectList
 
