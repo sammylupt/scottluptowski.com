@@ -3,9 +3,7 @@ import ReactDocumentTitle from 'react-document-title'
 
 const PageNotFound = () => (
   <div>
-    <ReactDocumentTitle
-      title="Scott Luptowski | Not Found"
-    />
+    <ReactDocumentTitle title="Scott Luptowski | Not Found" />
     Page not found
   </div>
 )

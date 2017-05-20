@@ -10,7 +10,6 @@ import ProjectTweetSection from '../components/ProjectTweetSection'
 import type { Project } from '../types'
 
 class ProjectPage extends Component {
-
   props: Project
 
   render() {
@@ -19,19 +18,17 @@ class ProjectPage extends Component {
 
     return (
       <ProjectPageWrapper>
-        <ReactDocumentTitle
-          title={pageTitle}
-        />
+        <ReactDocumentTitle title={pageTitle} />
 
         <Header>{name}</Header>
 
-        { summary() }
+        {summary()}
 
         <ProjectLinkSection links={links} />
 
-        { images && <ProjectImageList images={images} /> }
+        {images && <ProjectImageList images={images} />}
 
-        { tweets && <ProjectTweetSection tweets={tweets} /> }
+        {tweets && <ProjectTweetSection tweets={tweets} />}
 
       </ProjectPageWrapper>
     )

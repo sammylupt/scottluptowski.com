@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import { injectGlobal } from 'styled-components'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
+ReactDOM.render(<App />, document.getElementById('root'))
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`

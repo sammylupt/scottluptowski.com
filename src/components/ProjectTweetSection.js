@@ -2,10 +2,9 @@
 
 import React, { Component } from 'react'
 import TweetEmbed from 'react-tweet-embed'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 class ProjectTweetSection extends Component {
-
   props: {
     tweets: Array<string>
   }
@@ -15,14 +14,11 @@ class ProjectTweetSection extends Component {
 
     return (
       <div>
-        { tweets.map((tweet: string, i: number) => {
-          return (
-            <TweetWrapper key={i}>
-              <TweetEmbed id={tweet} />
-            </TweetWrapper>
-          )
-          })
-        }
+        {tweets.map((tweet: string, i: number) => (
+          <TweetWrapper key={i}>
+            <TweetEmbed id={tweet} />
+          </TweetWrapper>
+        ))}
       </div>
     )
   }

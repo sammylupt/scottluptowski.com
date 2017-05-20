@@ -10,7 +10,6 @@ const scrollToTop = () => {
 let historyListener = null
 
 class Match extends Component {
-
   static contextTypes = {
     history: propTypes.historyContext.isRequired
   }

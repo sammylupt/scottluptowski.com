@@ -5,7 +5,6 @@ import type { Link } from '../types'
 import styled from 'styled-components'
 
 class ItemList extends Component {
-
   props: {
     links: Array<Link>,
     header: React$Element<any>
@@ -20,19 +19,11 @@ class ItemList extends Component {
           {header}
         </HeaderWrapper>
 
-        {
-          links.map((link: Link, i: number) => {
-            return (
-              <ItemLink
-                key={i}
-                href={link.url}
-                target="_blank"
-              >
-                {link.title}
-              </ItemLink>
-            )
-          })
-        }
+        {links.map((link: Link, i: number) => (
+          <ItemLink key={i} href={link.url} target="_blank">
+            {link.title}
+          </ItemLink>
+        ))}
       </div>
     )
   }

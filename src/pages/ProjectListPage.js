@@ -1,13 +1,12 @@
 // @flow
 
 import React, { Component } from 'react'
-import ProjectPreview from "../components/ProjectPreview"
+import ProjectPreview from '../components/ProjectPreview'
 import styled from 'styled-components'
 
-import type { Project } from "../types"
+import type { Project } from '../types'
 
 class ProjectList extends Component {
-
   props: {
     projects: Array<Project>
   }
@@ -18,18 +17,14 @@ class ProjectList extends Component {
     return (
       <div>
         <Title>
-          Software Developer & Creative Technologist in <Nowrap>New York City</Nowrap>
+          Software Developer & Creative Technologist in
+          {' '}
+          <Nowrap>New York City</Nowrap>
         </Title>
         <ProjectListingsContainer>
-          {
-            projects.map((project: Project, i: number) => {
-              return (
-                <ProjectPreview
-                  key={i}
-                  {...project}
-                />)
-            })
-          }
+          {projects.map((project: Project, i: number) => {
+            return <ProjectPreview key={i} {...project} />
+          })}
         </ProjectListingsContainer>
       </div>
     )

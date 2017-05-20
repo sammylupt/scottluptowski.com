@@ -6,7 +6,6 @@ import styled from 'styled-components'
 import type { ProjectLink } from '../types'
 
 class ProjectLinkSection extends Component {
-
   props: {
     links: Array<ProjectLink>
   }
@@ -18,17 +17,12 @@ class ProjectLinkSection extends Component {
       <ProjectLinkContainer>
         <div>Links:</div>
 
-        { links.map((link: ProjectLink, i: number) => {
-            return (
-              <ProjectLinkListing key={i}>
-                <a href={link.url} target="_blank">{link.title}</a>
-                { link.meta &&
-                  <LinkMeta>{link.meta}</LinkMeta>
-                }
-              </ProjectLinkListing>
-            )
-          })
-        }
+        {links.map((link: ProjectLink, i: number) => (
+          <ProjectLinkListing key={i}>
+            <a href={link.url} target="_blank">{link.title}</a>
+            {link.meta && <LinkMeta>{link.meta}</LinkMeta>}
+          </ProjectLinkListing>
+        ))}
       </ProjectLinkContainer>
     )
   }

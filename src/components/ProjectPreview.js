@@ -8,7 +8,6 @@ import Image from '../components/Image'
 import type { Project } from '../types'
 
 class ProjectPreview extends Component {
-
   props: Project
 
   render() {
@@ -18,7 +17,7 @@ class ProjectPreview extends Component {
       <ProjectPreviewBlock>
         <Link to={`/projects/${slug}`}>
           <div>
-            <Image {...featuredImage}/>
+            <Image {...featuredImage} />
             <div>{name}</div>
           </div>
         </Link>
