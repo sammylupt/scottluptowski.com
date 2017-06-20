@@ -29,7 +29,7 @@ const BaseLink = styled(Link)`
   text-decoration: none;
 
   &:visited {
-    color: black
+    color: black;
   }
 `
 
