@@ -31,11 +31,14 @@ export default ProjectPage
 const ProjectPageWrapper = styled.div`
   text-align: center;
   margin: 0 auto;
+  max-width: 80%;
+  line-height: 161%;
 
   p {
     margin-bottom: 1em;
   }
 `
+
 const Header = styled.h2`
   font-weight: normal;
   font-size: 1.5em;

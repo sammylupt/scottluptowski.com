@@ -12,7 +12,7 @@ const ProjectPreview = ({ slug, name, featuredImage }: Project) => (
     <Link to={`/projects/${slug}`}>
       <div>
         <Image {...featuredImage} />
-        <div>{name}</div>
+        <ProjectName>{name}</ProjectName>
       </div>
     </Link>
   </ProjectPreviewBlock>
@@ -34,6 +34,11 @@ const ProjectPreviewBlock = styled.div`
     width: 100%;
     margin-bottom: 4em;
   }
+`
+
+const ProjectName = styled.div`
+  padding-top: 5px;
+  letter-spacing: .25px;
 `
 
 export default ProjectPreview

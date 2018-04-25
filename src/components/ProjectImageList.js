@@ -1,58 +1,28 @@
 // @flow
 
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import Image from './Image'
-import type { ImageWithMeta } from '../types'
+import Image from "./Image";
+import type { ImageWithMeta } from "../types";
 
 const ProjectImageList = ({ images }: { images: Array<ImageWithMeta> }) => (
   <div>
     {images.map((image: ImageWithMeta, i: number) => {
-      const { description, ...rest } = image
+      const { description, ...rest } = image;
 
       return (
         <ProjectImage>
           <Image {...rest} />
 
-          {image.description &&
-            <ProjectImageDescription>
-              {description}
-            </ProjectImageDescription>}
+          {image.description && (
+            <ProjectImageDescription>{description}</ProjectImageDescription>
+          )}
         </ProjectImage>
-      )
+      );
     })}
   </div>
-)
-
-// class ProjectImageList extends Component {
-//   props: {
-//     images: Array<ImageWithMeta>
-//   }
-//
-//   render() {
-//     const { images } = this.props
-//
-//     return (
-//       <div>
-//         {images.map((image: ImageWithMeta, i: number) => {
-//           const { description, ...rest } = image
-//
-//           return (
-//             <ProjectImage>
-//               <Image {...rest} />
-//
-//               {image.description &&
-//                 <ProjectImageDescription>
-//                   {description}
-//                 </ProjectImageDescription>}
-//             </ProjectImage>
-//           )
-//         })}
-//       </div>
-//     )
-//   }
-// }
+);
 
 const ProjectImage = styled.div`
   display: block;
@@ -64,13 +34,12 @@ const ProjectImage = styled.div`
   &:last-of-type {
     margin-bottom: 0;
   }
-`
+`;
 
 const ProjectImageDescription = styled.div`
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: .8em;
-  margin: .5em 0 1em;
+  font-size: 0.8em;
+  margin: 0.5em 0 1em;
   color: #999999;
-`
+`;
 
-export default ProjectImageList
+export default ProjectImageList;

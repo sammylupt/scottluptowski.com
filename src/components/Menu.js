@@ -5,31 +5,36 @@ import { Link } from 'react-router'
 
 const Menu = () => (
   <MenuHeader>
-    <MainLink to="/">Scott Luptowski</MainLink>
-    <NavLink to="/">Home</NavLink>
-    <NavLink to="/about">About</NavLink>
-    <NavLink to="/posts">Posts</NavLink>
-    <NavLink to="/contact">Contact</NavLink>
+    <LinksContainer>
+      <NavLink to="/" bold>Scott Luptowski</NavLink>
+      <NavLink to="/about">About</NavLink>
+      <NavLink to="/posts">Posts</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+    </LinksContainer>
   </MenuHeader>
 )
 
 export default Menu
 
+const LinksContainer = styled.div`
+  margin: .5em 0 .25em 0;
+  font-size: 18px;
+  position: fixed;
+  z-index: 1;
+`
+
 const MenuHeader = styled.header`
   padding-top: 1em;
   padding-bottom: .5em;
   margin-bottom: 1em;
-  border-bottom: 1px dashed black;
-  text-align: center;
+  margin-left: 1em;
 `
 
 const BaseLink = styled(Link)`
-  color: black;
-  text-transform: uppercase;
+  color: #222;
   text-decoration: none;
-
   &:visited {
-    color: black;
+    color: #222;
   }
 `
 
@@ -37,17 +42,26 @@ const MainLink = styled(BaseLink)`
   font-size: 30px;
   margin: 0 auto 0.1em;
   display: block;
+  letter-spacing: 2.5px;
+  text-transform: none;
+  word-spacing: 5px;
 `
 
 const NavLink = styled(BaseLink)`
-  margin-right: 1em;
-  padding: .25em;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  margin: .25em 1em 0 .25em;
+  transition: 0.2s ease-in-out;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #222;
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  ${(props) => 
+    props.bold &&
+    `
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    `
   }
 `

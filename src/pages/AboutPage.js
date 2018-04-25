@@ -8,10 +8,7 @@ const AboutPage = () => (
   <AboutContainer>
     <ReactDocumentTitle title="Scott Luptowski | About" />
     <p>
-      I'm a developer at
-      {' '}
-      <a href="http://www.greenhouse.io" target="_blank">Greenhouse</a>
-      .
+      I'm a developer at <a href="http://www.greenhouse.io" target="_blank">Greenhouse</a>.
     </p>
 
     <p>
@@ -19,7 +16,7 @@ const AboutPage = () => (
     </p>
 
     <p>
-      My languages of choice are Ruby, JavaScript, Elixir, and Clojure. When I'm AFK I enjoy travel, food, live music, and bike riding.
+      My languages of choice are JavaScript, Ruby, Elixir, and Clojure. When I'm AFK I enjoy travel, food, live music, and bike riding.
     </p>
     <QuoteSection>
       <PressQuote>

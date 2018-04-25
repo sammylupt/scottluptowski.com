@@ -1,11 +1,11 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Miss } from 'react-router'
+// import { Miss } from 'react-router'
 import Match from './components/Match'
 import { BrowserRouter } from 'react-g-analytics'
 import ReactDocumentTitle from 'react-document-title'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 import Menu from './components/Menu'
 import ProjectListPage from './pages/ProjectListPage'
@@ -51,10 +51,9 @@ class App extends Component {
               pattern="/contact"
               render={() => <ContactPage links={links} />}
             />
-            <Miss component={PageNotFound} />
           </RouteCountainer>
           <Footer>
-            © 2017 Scott Luptowski
+            © 2018 Scott Luptowski
           </Footer>
         </div>
       </BrowserRouter>
@@ -64,17 +63,18 @@ class App extends Component {
 
 export default App
 
-const RouteCountainer = s.div`
+const RouteCountainer = styled.div`
   width: 80%;
   max-width: 960px;
   margin: 0 auto;
+  margin-top: 5em;
 
   @media (max-width: 800px) {
     width: 95%;
   }
 `
 
-const Footer = s.footer`
+const Footer = styled.footer`
   font-size: .7em;
   text-align: center;
   margin: 2em auto 1em;

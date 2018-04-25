@@ -5,10 +5,12 @@
   "homepage": "http://www.scottluptowski.com",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.1"
+    "react-scripts": "1.1.4"
   },
   "dependencies": {
+    "flow-bin": "^0.70.0",
     "history": "^4.2.0",
+    "prettier": "^1.12.1",
     "react": "^15.3.2",
     "react-document-title": "^2.0.2",
     "react-dom": "^15.3.2",

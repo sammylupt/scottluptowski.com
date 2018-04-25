@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import type { Project, Link } from './types'
-import s from 'styled-components'
+import styled from 'styled-components'
 
 const projects: Array<Project> = [
   {
@@ -14,7 +14,7 @@ const projects: Array<Project> = [
             Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.
           </p>
 
-          <Featured light={true}>
+          <Featured>
             "Best prank of 2016" - Gawker
           </Featured>
         </div>
@@ -220,9 +220,9 @@ const projects: Array<Project> = [
             Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.
           </p>
           <p>To install, run the following command from your shell:</p>
-          <Featured dark={true}>
+          <Code>
             $ gem install standings
-          </Featured>
+          </Code>
         </div>
       )
     },
@@ -369,11 +369,17 @@ const links: Array<Link> = [
   }
 ]
 
-const Featured = s.div`
+const Featured = styled.div`
   display: inline-block;
   padding: .5em;
-  background-color: ${props => (props.light ? '#c0ffee' : 'black')};
-  color: ${props => (props.light ? 'black' : 'white')};
+  background-color: #c0ffee;
+  color: black;
+`
+
+const Code = styled(Featured)`
+  font-family: 'Courier', 'Courier New', monospace, serif;
+  color: white;
+  background-color: black;
 `
 
 export { projects, posts, links }

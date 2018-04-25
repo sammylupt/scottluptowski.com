@@ -2,16 +2,14 @@
 
 import React, { Component } from 'react'
 import ProjectPreview from '../components/ProjectPreview'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import type { Project } from '../types'
 
 const ProjectList = ({ projects }: { projects: Array<Project> }) => (
   <div>
     <Title>
-      Software Developer & Creative Technologist in
-      {' '}
-      <Nowrap>New York City</Nowrap>
+      Scott Luptowski is a Software Developer and Creative Technologist in New York City
     </Title>
     <ProjectListingsContainer>
       {projects.map((project: Project, i: number) => {
@@ -23,17 +21,28 @@ const ProjectList = ({ projects }: { projects: Array<Project> }) => (
 
 export default ProjectList
 
-const Nowrap = styled.span`
-  white-space: nowrap;
+const rotate = keyframes`
+  0%, 100% { transform: rotate(-5deg) }
+  50% { transform: rotate(5deg) }
 `
 
 const Title = styled.p`
-  background-color: #cccccc;
-  padding: 1em;
-  margin: 1em auto;
+  padding-bottom: 1em;
+  font-weight: 600;
   text-align: center;
-  font-size: 1.25em;
-  border: 1px solid black;
+  color: rgba(45,55,65,.95);
+  animation: ${rotate} 8s linear infinite;
+
+  @media (min-width: 800px) {
+    font-size: 50px;
+    line-height: 80px;
+  }
+
+  @media (max-width: 799px) {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
 `
 
 const ProjectListingsContainer = styled.div`

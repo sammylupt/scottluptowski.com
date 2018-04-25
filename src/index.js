@@ -14,7 +14,8 @@ injectGlobal`
   }
 
   body {
-    font-family: "Courier", "Courier New", "monospace", serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fcfcfc;
   }
 
   a, a:visited {
