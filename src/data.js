@@ -7,19 +7,17 @@ const projects: Array<Project> = [
   {
     name: 'Hamiltowned',
     slug: 'hamiltowned',
-    summary: () => {
-      return (
-        <div>
-          <p>
-            Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.
-          </p>
+    summary: () => (
+      <div>
+        <p>
+          Prank your friends by sending them a fake Hamilton lottery winning email. Hamiltowned was live for less than 48 hours thanks to a legal threat from lawyers representing Hamilton, but managed to prank thousands of unsuspecting recipients.
+        </p>
 
-          <Featured>
-            "Best prank of 2016" - Gawker
-          </Featured>
-        </div>
-      )
-    },
+        <Featured>
+          "Best prank of 2016" - Gawker
+        </Featured>
+      </div>
+    ),
     links: [
       {
         url: 'http://gawker.com/tricking-someone-into-believing-they-won-the-hamilton-l-1783463868',
@@ -64,13 +62,11 @@ const projects: Array<Project> = [
   {
     name: 'Nicolas Cage Roulette',
     slug: 'nicolas-cage-roulette',
-    summary: () => {
-      return (
-        <div>
-          Nicolas Cage Roulette lets you stream random Nicolas Cage movies on Netflix. Just choose from 'Action Movies' or 'All Movies' and start watching.
-        </div>
-      )
-    },
+    summary: () => (
+      <div>
+        Nicolas Cage Roulette lets you stream random Nicolas Cage movies on Netflix. Just choose from 'Action Movies' or 'All Movies' and start watching.
+      </div>
+    ),
     links: [
       {
         url: 'http://www.nicolascageroulette.com',
@@ -107,29 +103,27 @@ const projects: Array<Project> = [
   {
     name: 'Browse With Guy',
     slug: 'browse-with-guy',
-    summary: () => {
-      return (
-        <div>
-          <p>
-            Browse With Guy is a Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri. It was built for the
-            {' '}
-            <a href="http://www.stupidhackathon.com/" target="_blank">
-              2016 Stupid Shit No One Needs and Terrible Ideas Hackathon
-            </a>
-            .
-          </p>
+    summary: () => (
+      <div>
+        <p>
+          Browse With Guy is a Chrome Extension that covers every webpage you visit with the same photo of Guy Fieri. It was built for the
+          {' '}
+          <a href="http://www.stupidhackathon.com/" target="_blank">
+            2016 Stupid Shit No One Needs and Terrible Ideas Hackathon
+          </a>
+          .
+        </p>
 
-          <p>
-            <a
-              href="https://chrome.google.com/webstore/detail/browse-with-guy/pffcpolokheijlggcplcbkadpgkhmomj/reviews?hl=en-US"
-              target="_blank"
-            >
-              Download on the Chrome Store
-            </a>
-          </p>
-        </div>
-      )
-    },
+        <p>
+          <a
+            href="https://chrome.google.com/webstore/detail/browse-with-guy/pffcpolokheijlggcplcbkadpgkhmomj/reviews?hl=en-US"
+            target="_blank"
+          >
+            Download on the Chrome Store
+          </a>
+        </p>
+      </div>
+    ),
     links: [
       {
         url: 'http://nymag.com/following/2016/02/stupid-hackathon-actually-very-good-and-funny.html',
@@ -154,13 +148,11 @@ const projects: Array<Project> = [
   {
     name: 'SVU EBooks',
     slug: 'svu-ebooks',
-    summary: () => {
-      return (
-        <div>
-          SVU EBooks is a series of fake Law and Order SVU episode summaries I generated. I gathered the summary of every SVU episode from Hulu, IMDb, and Rotten Tomatoes, and used a Markov Chain library to predict new episodes.
-        </div>
-      )
-    },
+    summary: () => (
+      <div>
+        SVU EBooks is a series of fake Law and Order SVU episode summaries I generated. I gathered the summary of every SVU episode from Hulu, IMDb, and Rotten Tomatoes, and used a Markov Chain library to predict new episodes.
+      </div>
+    ),
     links: [
       {
         url: 'http://mashable.com/2017/01/03/law-and-order-svu-episode-generator/',
@@ -180,18 +172,16 @@ const projects: Array<Project> = [
   {
     name: 'Trump Siren',
     slug: 'trump-siren',
-    summary: () => {
-      return (
-        <div>
-          Built with
-          {' '}
-          <a href="https://twitter.com/ianrsolano" target="_blank">
-            Ian Solano
-          </a>
-          , Trump Siren is an Arduino connected to a police siren that turns on and spins every time Donald Trump sends a tweet.
-        </div>
-      )
-    },
+    summary: () => (
+      <div>
+        Built with
+        {' '}
+        <a href="https://twitter.com/ianrsolano" target="_blank">
+          Ian Solano
+        </a>
+        , Trump Siren is an Arduino connected to a police siren that turns on and spins every time Donald Trump sends a tweet.
+      </div>
+    ),
     links: [
       {
         url: 'https://github.com/scottluptowski/trump-siren',
@@ -213,19 +203,17 @@ const projects: Array<Project> = [
   {
     name: 'Standings',
     slug: 'standings',
-    summary: () => {
-      return (
-        <div>
-          <p>
-            Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.
-          </p>
-          <p>To install, run the following command from your shell:</p>
-          <Code>
-            $ gem install standings
-          </Code>
-        </div>
-      )
-    },
+    summary: () => (
+      <div>
+        <p>
+          Standings is a command line Ruby gem that displays the current results of European soccer/football leagues.
+        </p>
+        <p>To install, run the following command from your shell:</p>
+        <Code>
+          $ gem install standings
+        </Code>
+      </div>
+    ),
     links: [
       {
         url: 'https://rubygems.org/gems/standings',
@@ -250,18 +238,16 @@ const projects: Array<Project> = [
   {
     name: 'New York Times or Jenny Holzer?',
     slug: 'new-york-times-or-jenny-holzer',
-    summary: () => {
-      return (
-        <div>
-          <p>
-            This is a guessing game between random text snippets from the work of Jenny Holzer and tweets from the New York Times Minus Context twitter account.
-          </p>
-          <p>
-            Built with React and hosted on AWS S3, this is also the first (and only!) app I've built with Alt.
-          </p>
-        </div>
-      )
-    },
+    summary: () => (
+      <div>
+        <p>
+          This is a guessing game between random text snippets from the work of Jenny Holzer and tweets from the New York Times Minus Context twitter account.
+        </p>
+        <p>
+          Built with React and hosted on AWS S3, this is also the first (and only!) app I've built with Alt.
+        </p>
+      </div>
+    ),
     links: [
       {
         url: 'http://www.newyorktimesorjennyholzer.com',
@@ -286,18 +272,16 @@ const projects: Array<Project> = [
   {
     name: 'spoil.rs',
     slug: 'spoilrs',
-    summary: () => {
-      return (
-        <div>
-          <p>
-            Spoil.rs was a spoiler tag for Twitter. It was a way to embed a hidden spoiler in your tweets so you don't ruin TV and movies for others. Users would type in a tweet and a secret, and Spoil.rs would post the tweet with a link to see the secret.
-          </p>
-          <p>
-            The site was up for a few months in Summer 2013. Spoil.rs was built with the LAMP stack.
-          </p>
-        </div>
-      )
-    },
+    summary: () => (
+      <div>
+        <p>
+          Spoil.rs was a spoiler tag for Twitter. It was a way to embed a hidden spoiler in your tweets so you don't ruin TV and movies for others. Users would type in a tweet and a secret, and Spoil.rs would post the tweet with a link to see the secret.
+        </p>
+        <p>
+          The site was up for a few months in Summer 2013. Spoil.rs was built with the LAMP stack.
+        </p>
+      </div>
+    ),
     links: [
       {
         url: 'http://www.forbes.com/sites/ewanspence/2013/05/28/tweeting-out-spoilers-without-spoiling-the-fun',

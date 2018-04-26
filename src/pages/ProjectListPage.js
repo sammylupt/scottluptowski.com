@@ -9,7 +9,7 @@ import type { Project } from '../types'
 const ProjectList = ({ projects }: { projects: Array<Project> }) => (
   <div>
     <Title>
-      Scott Luptowski is a Software Developer and Creative Technologist in New York City
+      Scott Luptowski is a Software Developer and Creative Technologist in <Nowrap>New York City</Nowrap>
     </Title>
     <ProjectListingsContainer>
       {projects.map((project: Project, i: number) => {
@@ -24,6 +24,10 @@ export default ProjectList
 const rotate = keyframes`
   0%, 100% { transform: rotate(-5deg) }
   50% { transform: rotate(5deg) }
+`
+
+const Nowrap = styled.span`
+  white-space: nowrap;
 `
 
 const Title = styled.p`

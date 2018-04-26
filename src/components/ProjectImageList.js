@@ -12,7 +12,7 @@ const ProjectImageList = ({ images }: { images: Array<ImageWithMeta> }) => (
       const { description, ...rest } = image;
 
       return (
-        <ProjectImage>
+        <ProjectImage key={i}>
           <Image {...rest} />
 
           {image.description && (
