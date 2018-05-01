@@ -26,7 +26,9 @@ export type ImageWithMeta = {
 }
 
 export type LocationProps = {
-  params: {
-    project: string
+  match: {
+    params: {
+      project: string
+    }
   }
 }

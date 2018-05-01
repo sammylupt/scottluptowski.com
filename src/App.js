@@ -1,9 +1,8 @@
 // @flow
 
 import React, { Component } from 'react'
-// import { Miss } from 'react-router'
-import Match from './components/Match'
-import { BrowserRouter } from 'react-g-analytics'
+import { BrowserRouter, Route } from 'react-router-dom'
+// import Match from './components/Match'
 import ReactDocumentTitle from 'react-document-title'
 import styled from 'styled-components'
 
@@ -18,8 +17,10 @@ import PageNotFound from './components/PageNotFound'
 import { projects, posts, links } from './data'
 import type { Project, LocationProps } from './types'
 
-const renderProjectOrMiss = ({ params }: LocationProps) => {
-  const project: ?Project = projects.find(p => p.slug === params.project)
+const GA_ID = "UA-7600440-11";
+
+const renderProjectOrMiss = ({ match }: LocationProps) => {
+  const project: ?Project = projects.find(p => p.slug === match.params.project)
 
   if (project) {
     return <ProjectPage {...project} />
@@ -31,24 +32,24 @@ const renderProjectOrMiss = ({ params }: LocationProps) => {
 class App extends Component {
   render() {
     return (
-      <BrowserRouter id="UA-7600440-11">
+      <BrowserRouter>
         <div>
           <ReactDocumentTitle title="Scott Luptowski" />
           <Menu />
           <RouteCountainer>
-            <Match
-              exactly
-              pattern="/"
+            <Route
+              exact
+              path="/"
               render={() => <ProjectListPage projects={projects} />}
             />
-            <Match pattern="/about" render={() => <AboutPage />} />
-            <Match
-              pattern="/posts"
+            <Route path="/about" render={() => <AboutPage />} />
+            <Route
+              path="/posts"
               render={() => <PostsPage posts={posts} />}
             />
-            <Match pattern="/projects/:project" render={renderProjectOrMiss} />
-            <Match
-              pattern="/contact"
+            <Route path="/projects/:project" render={renderProjectOrMiss} />
+            <Route
+              path="/contact"
               render={() => <ContactPage links={links} />}
             />
           </RouteCountainer>
