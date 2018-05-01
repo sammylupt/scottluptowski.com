@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import ReactDocumentTitle from 'react-document-title'
 import styled from 'styled-components'
+import { small } from '../utils'
 
 const AboutPage = () => (
   <AboutContainer>
@@ -54,9 +55,9 @@ const PressQuote = styled.blockquote`
       content: "- ";
     }
 
-    @media (max-width: 800px) {
+    ${small`
       padding-left: 1em;
-    }
+    `}
   }
 }
 `

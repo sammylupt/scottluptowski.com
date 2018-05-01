@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-// import Match from './components/Match'
 import ReactDocumentTitle from 'react-document-title'
 import styled from 'styled-components'
 
@@ -16,6 +15,7 @@ import PageNotFound from './components/PageNotFound'
 
 import { projects, posts, links } from './data'
 import type { Project, LocationProps } from './types'
+import { small, large } from './utils'
 
 const GA_ID = "UA-7600440-11";
 
@@ -70,9 +70,9 @@ const RouteCountainer = styled.div`
   margin: 0 auto;
   margin-top: 5em;
 
-  @media (max-width: 800px) {
+  ${small`
     width: 95%;
-  }
+  `}
 `
 
 const Footer = styled.footer`

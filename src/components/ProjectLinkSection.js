@@ -28,12 +28,8 @@ const ProjectLinkListing = styled.div`
 `
 
 const LinkMeta = styled.span`
-  margin-left: .25em;
-
-  @media (max-width: 800px) {
-    display: block;
-    font-size: .75em;
-  }
+  display: block;
+  font-size: .75em;
 `
 
 export default ProjectLinkSection

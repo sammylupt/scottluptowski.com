@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import ProjectPreview from '../components/ProjectPreview'
 import styled, { keyframes } from 'styled-components'
-
+import { small, large } from '../utils'
 import type { Project } from '../types'
 
 const ProjectList = ({ projects }: { projects: Array<Project> }) => (
@@ -37,16 +37,15 @@ const Title = styled.p`
   color: rgba(45,55,65,.95);
   animation: ${rotate} 8s linear infinite;
 
-  @media (min-width: 800px) {
+  ${large`
     font-size: 50px;
     line-height: 80px;
-  }
+  `}
 
-  @media (max-width: 799px) {
+  ${small`
     font-size: 36px;
     line-height: 54px;
-  }
-
+  `}
 `
 
 const ProjectListingsContainer = styled.div`

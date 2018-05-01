@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-
+import { below } from '../utils'
 import Image from '../components/Image'
 import type { Project } from '../types'
 
@@ -22,18 +22,18 @@ const ProjectPreviewBlock = styled.div`
   max-width: 400px;
   margin: 0 auto 2em;
 
-  @media (max-width: 1000px) {
+  ${below(1000)`
     width: 350px;
-  }
+  `}
 
-  @media (max-width: 900px) {
+  ${below(900)`
     width: 300px;
-  }
+  `}
 
-  @media (max-width: 640px) {
+  ${below(640)`
     width: 100%;
     margin-bottom: 4em;
-  }
+  `}
 `
 
 const ProjectName = styled.div`
