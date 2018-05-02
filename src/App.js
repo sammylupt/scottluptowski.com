@@ -1,9 +1,10 @@
 // @flow
 
 import React, { Component } from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, withRouter } from 'react-router-dom'
 import ReactDocumentTitle from 'react-document-title'
 import styled from 'styled-components'
+import ReactGA from 'react-ga'
 
 import Menu from './components/Menu'
 import ProjectListPage from './pages/ProjectListPage'
@@ -17,7 +18,9 @@ import { projects, posts, links } from './data'
 import type { Project, LocationProps } from './types'
 import { small, large } from './utils'
 
-const GA_ID = "UA-7600440-11";
+const GA_ID = 'UA-7600440-11'
+
+const currentYear = new Date().getFullYear();
 
 const renderProjectOrMiss = ({ match }: LocationProps) => {
   const project: ?Project = projects.find(p => p.slug === match.params.project)
@@ -29,39 +32,54 @@ const renderProjectOrMiss = ({ match }: LocationProps) => {
   }
 }
 
-class App extends Component {
+const App = () => (
+  <BrowserRouter>
+    <AppInsideRouter />
+  </BrowserRouter>
+)
+
+class AppWithSideEffects extends Component {
+
+  componentDidMount() {
+    ReactGA.initialize(GA_ID)
+  }
+  
+  componentDidUpdate(prevProps) {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      window.scrollTo(0, 0);
+      ReactGA.pageview(this.props.location.pathname)
+      console.log(this.props.location.pathname)
+    }
+  }
+
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <ReactDocumentTitle title="Scott Luptowski" />
-          <Menu />
-          <RouteCountainer>
-            <Route
-              exact
-              path="/"
-              render={() => <ProjectListPage projects={projects} />}
-            />
-            <Route path="/about" render={() => <AboutPage />} />
-            <Route
-              path="/posts"
-              render={() => <PostsPage posts={posts} />}
-            />
-            <Route path="/projects/:project" render={renderProjectOrMiss} />
-            <Route
-              path="/contact"
-              render={() => <ContactPage links={links} />}
-            />
-          </RouteCountainer>
-          <Footer>
-            © 2018 Scott Luptowski
+      <div>
+        <ReactDocumentTitle title="Scott Luptowski" />
+        <Menu />
+        <RouteCountainer>
+          <Route
+            exact
+            path="/"
+            render={() => <ProjectListPage projects={projects} />}
+          />
+          <Route path="/about" render={() => <AboutPage />} />
+          <Route path="/posts" render={() => <PostsPage posts={posts} />} />
+          <Route path="/projects/:project" render={renderProjectOrMiss} />
+          <Route
+            path="/contact"
+            render={() => <ContactPage links={links} />}
+          />
+        </RouteCountainer>
+        <Footer>
+          © {currentYear} Scott Luptowski
           </Footer>
-        </div>
-      </BrowserRouter>
+      </div>
     )
   }
 }
 
+const AppInsideRouter = withRouter(AppWithSideEffects)
 export default App
 
 const RouteCountainer = styled.div`
@@ -76,8 +94,8 @@ const RouteCountainer = styled.div`
 `
 
 const Footer = styled.footer`
-  font-size: .7em;
+  font-size: 0.7em;
   text-align: center;
   margin: 2em auto 1em;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 `

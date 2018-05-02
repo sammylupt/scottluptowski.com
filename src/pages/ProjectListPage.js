@@ -36,6 +36,7 @@ const Title = styled.p`
   text-align: center;
   color: rgba(45,55,65,.95);
   animation: ${rotate} 8s linear infinite;
+  margin: 0 auto;
 
   ${large`
     font-size: 50px;
@@ -43,8 +44,9 @@ const Title = styled.p`
   `}
 
   ${small`
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 24px;
+    line-height: 38px;
+    max-width: 95%;
   `}
 `
 
