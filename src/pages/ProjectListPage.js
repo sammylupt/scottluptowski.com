@@ -6,6 +6,11 @@ import styled, { keyframes } from "styled-components"
 import { small, large } from "../utils"
 import type { Project } from "../types"
 
+const Times = {
+  duration: 1000,
+  delay: 1100
+}
+
 const debounce = (fn, time) => {
   let timeCalled = null
 
@@ -20,7 +25,7 @@ const debounce = (fn, time) => {
 class ProjectList extends React.Component {
   constructor(props) {
     super(props)
-    this.debouncer = debounce(() => this.handler(), 1100)
+    this.debouncer = debounce(() => this.handler(), Times.delay)
     this.state = {
       value: false
     }
@@ -32,7 +37,7 @@ class ProjectList extends React.Component {
     this.setState(toggler)
     setTimeout(() => {
       this.setState(toggler)
-    }, 1000)
+    }, Times.duration)
   }
 
   render() {
@@ -78,7 +83,7 @@ const Title = styled.p`
   animation: ${rotate} 8s linear infinite;
   margin: 0 auto;
 
-  ${p => p.fastSpin && `animation: ${fastRotate} 1s ease-in infinite; `}
+  ${p => p.fastSpin && `animation: ${fastRotate} ${Times.duration}ms ease-in infinite; `}
   ${large`
     font-size: 50px;
     line-height: 80px;
