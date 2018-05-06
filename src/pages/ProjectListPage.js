@@ -6,9 +6,46 @@ import styled, { keyframes } from 'styled-components'
 import { small, large } from '../utils'
 import type { Project } from '../types'
 
-const ProjectList = ({ projects }: { projects: Array<Project> }) => (
+// let value = false;
+
+const debounce = (fn, time) => {
+  let timeCalled = null;
+
+  return function(...args) {
+    if (
+        !timeCalled ||
+        (new Date() - timeCalled) > time  
+      ) {
+      timeCalled = new Date()
+      return fn(...args)
+    }
+  }
+}
+
+class ProjectList extends React.Component {
+
+constructor(props) {
+  super(props)
+  this.debouncer = debounce(() => this.handler(), 1100);  
+}
+
+state = {
+  value: false
+}
+
+handler() {
+  this.setState(state => ({value: !state.value}))
+  setTimeout( () => {
+    this.setState(state => ({value: !state.value}))
+  }, 1000)
+}
+
+render() {
+  const { projects } = this.props;
+  return (
+
   <div>
-    <Title>
+    <Title onClick={ (e) => this.debouncer() } fastSpin={this.state.value}>
       Scott Luptowski is a Software Developer and Creative Technologist in <Nowrap>New York City</Nowrap>
     </Title>
     <ProjectListingsContainer>
@@ -18,12 +55,19 @@ const ProjectList = ({ projects }: { projects: Array<Project> }) => (
     </ProjectListingsContainer>
   </div>
 )
+}
+}
 
 export default ProjectList
 
 const rotate = keyframes`
   0%, 100% { transform: rotate(-5deg) }
   50% { transform: rotate(5deg) }
+`
+
+const fastRotate = keyframes`
+  0% { transform: rotate(-359deg) }
+  100% { transform: rotate(-5deg) }
 `
 
 const Nowrap = styled.span`
@@ -38,6 +82,7 @@ const Title = styled.p`
   animation: ${rotate} 8s linear infinite;
   margin: 0 auto;
 
+  ${props => props.fastSpin && `animation: ${fastRotate} 1s ease-in infinite; `}
   ${large`
     font-size: 50px;
     line-height: 80px;
