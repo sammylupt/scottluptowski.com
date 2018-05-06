@@ -1,21 +1,16 @@
 // @flow
 
-import React, { Component } from 'react'
-import ProjectPreview from '../components/ProjectPreview'
-import styled, { keyframes } from 'styled-components'
-import { small, large } from '../utils'
-import type { Project } from '../types'
-
-// let value = false;
+import React, { Component } from "react"
+import ProjectPreview from "../components/ProjectPreview"
+import styled, { keyframes } from "styled-components"
+import { small, large } from "../utils"
+import type { Project } from "../types"
 
 const debounce = (fn, time) => {
-  let timeCalled = null;
+  let timeCalled = null
 
   return function(...args) {
-    if (
-        !timeCalled ||
-        (new Date() - timeCalled) > time  
-      ) {
+    if (!timeCalled || new Date() - timeCalled > time) {
       timeCalled = new Date()
       return fn(...args)
     }
@@ -23,39 +18,40 @@ const debounce = (fn, time) => {
 }
 
 class ProjectList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.debouncer = debounce(() => this.handler(), 1100)
+    this.state = {
+      value: false
+    }
+  }
 
-constructor(props) {
-  super(props)
-  this.debouncer = debounce(() => this.handler(), 1100);  
-}
+  handler() {
+    let toggler = state => ({ value: !state.value })
 
-state = {
-  value: false
-}
+    this.setState(toggler)
+    setTimeout(() => {
+      this.setState(toggler)
+    }, 1000)
+  }
 
-handler() {
-  this.setState(state => ({value: !state.value}))
-  setTimeout( () => {
-    this.setState(state => ({value: !state.value}))
-  }, 1000)
-}
+  render() {
+    const { projects } = this.props
 
-render() {
-  const { projects } = this.props;
-  return (
-
-  <div>
-    <Title onClick={ (e) => this.debouncer() } fastSpin={this.state.value}>
-      Scott Luptowski is a Software Developer and Creative Technologist in <Nowrap>New York City</Nowrap>
-    </Title>
-    <ProjectListingsContainer>
-      {projects.map((project: Project, i: number) => {
-        return <ProjectPreview key={i} {...project} />
-      })}
-    </ProjectListingsContainer>
-  </div>
-)
-}
+    return (
+      <div>
+        <Title onClick={e => this.debouncer()} fastSpin={this.state.value}>
+          Scott Luptowski is a Software Developer and Creative Technologist in{" "}
+          <Nowrap>New York City</Nowrap>
+        </Title>
+        <ProjectListingsContainer>
+          {projects.map((project: Project, i: number) => {
+            return <ProjectPreview key={i} {...project} />
+          })}
+        </ProjectListingsContainer>
+      </div>
+    )
+  }
 }
 
 export default ProjectList
@@ -82,7 +78,7 @@ const Title = styled.p`
   animation: ${rotate} 8s linear infinite;
   margin: 0 auto;
 
-  ${props => props.fastSpin && `animation: ${fastRotate} 1s ease-in infinite; `}
+  ${p => p.fastSpin && `animation: ${fastRotate} 1s ease-in infinite; `}
   ${large`
     font-size: 50px;
     line-height: 80px;
