@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDocumentTitle from 'react-document-title'
 import styled from 'styled-components'
 

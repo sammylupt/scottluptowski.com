@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react'
+import React from 'react'
 import ProjectPreview from '../components/ProjectPreview'
 import styled, { keyframes } from 'styled-components'
 import { small, large } from '../utils'

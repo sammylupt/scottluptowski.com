@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react'
+import React from 'react'
 import type { Link } from '../types'
 import ReactDocumentTitle from 'react-document-title'
 import ItemList from '../components/ItemList'

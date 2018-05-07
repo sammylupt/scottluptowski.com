@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react'
+import React from 'react'
 import TweetEmbed from 'react-tweet-embed'
 import styled from 'styled-components'
 
