@@ -11,7 +11,9 @@ const ProjectLinkSection = ({ links }: { links: Array<ProjectLink> }) => (
 
     {links.map((link: ProjectLink, i: number) => (
       <ProjectLinkListing key={i}>
-        <a href={link.url} target="_blank">{link.title}</a>
+        <a href={link.url} target="_blank">
+          {link.title}
+        </a>
         {link.meta && <LinkMeta>{link.meta}</LinkMeta>}
       </ProjectLinkListing>
     ))}
@@ -24,12 +26,12 @@ const ProjectLinkContainer = styled.div`
 `
 
 const ProjectLinkListing = styled.div`
-  margin-bottom: 0.25em
+  margin-bottom: 0.25em;
 `
 
 const LinkMeta = styled.span`
   display: block;
-  font-size: .75em;
+  font-size: 0.75em;
 `
 
 export default ProjectLinkSection

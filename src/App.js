@@ -38,14 +38,13 @@ const App = () => (
 )
 
 class AppWithSideEffects extends Component {
-
   componentDidMount() {
     ReactGA.initialize(GA_ID)
   }
-  
+
   componentDidUpdate(prevProps) {
     if (prevProps.location.pathname !== this.props.location.pathname) {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0)
       ReactGA.pageview(this.props.location.pathname)
       console.log(this.props.location.pathname)
     }
@@ -65,10 +64,7 @@ class AppWithSideEffects extends Component {
           <Route path="/about" render={() => <AboutPage />} />
           <Route path="/posts" render={() => <PostsPage posts={posts} />} />
           <Route path="/projects/:project" render={renderProjectOrMiss} />
-          <Route
-            path="/contact"
-            render={() => <ContactPage links={links} />}
-          />
+          <Route path="/contact" render={() => <ContactPage links={links} />} />
         </RouteCountainer>
         <Footer links={links} />
       </div>
@@ -87,5 +83,5 @@ const RouteCountainer = styled.div`
 
   ${small`
     width: 95%;
-  `}
+  `};
 `

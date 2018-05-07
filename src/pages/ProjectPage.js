@@ -22,7 +22,6 @@ const ProjectPage = ({ links, images, name, summary, tweets }: Project) => (
     {images && <ProjectImageList images={images} />}
 
     {tweets && <ProjectTweetSection tweets={tweets} />}
-
   </ProjectPageWrapper>
 )
 

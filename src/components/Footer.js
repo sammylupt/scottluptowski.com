@@ -2,33 +2,29 @@
 
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import type { Link } from '../types'
 
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands'
 
 fontawesome.library.add(brands)
-const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear()
 
-const Footer = ({links}) => (
+const Footer = ({ links }: { links: Array<Link> }) => (
   <Container>
     <FooterText>© {currentYear} Scott Luptowski</FooterText>
     <p>
       {links.map(link => (
-        <ContactLink
-          href={link.url}
-          target="_blank"
-          alt={link.title}
-        >
-          <FontAwesomeIcon icon={["fab", link.title.toLowerCase()]} />
-
+        <ContactLink href={link.url} target="_blank" alt={link.title}>
+          <FontAwesomeIcon icon={['fab', link.title.toLowerCase()]} />
         </ContactLink>
       ))}
     </p>
   </Container>
 )
 
-export default Footer;
+export default Footer
 
 const Container = styled.footer`
   text-align: center;
@@ -45,7 +41,7 @@ const ContactLink = styled.a`
   padding-right: 10px;
   color: #222222 !important;
   font-size: 18px;
-  opacity: .8;
+  opacity: 0.8;
 
   &:hover {
     color: #111111;

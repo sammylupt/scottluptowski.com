@@ -1,10 +1,10 @@
 // @flow
 
-import React, { Component } from "react"
-import ProjectPreview from "../components/ProjectPreview"
-import styled, { keyframes } from "styled-components"
-import { small, large } from "../utils"
-import type { Project } from "../types"
+import React, { Component } from 'react'
+import ProjectPreview from '../components/ProjectPreview'
+import styled, { keyframes } from 'styled-components'
+import { small, large } from '../utils'
+import type { Project } from '../types'
 
 const Times = {
   duration: 1000,
@@ -46,7 +46,7 @@ class ProjectList extends React.Component {
     return (
       <div>
         <Title onClick={e => this.debouncer()} fastSpin={this.state.value}>
-          Scott Luptowski is a Software Developer and Creative Technologist in{" "}
+          Scott Luptowski is a Software Developer and Creative Technologist in{' '}
           <Nowrap>New York City</Nowrap>
         </Title>
         <ProjectListingsContainer>
@@ -85,7 +85,9 @@ const Title = styled.p`
   cursor: default;
   user-select: none;
 
-  ${p => p.fastSpin && `animation: ${fastRotate} ${Times.duration}ms ease-in infinite; `}
+  ${p =>
+    p.fastSpin &&
+    `animation: ${fastRotate} ${Times.duration}ms ease-in infinite; `}
   ${large`
     font-size: 50px;
     line-height: 80px;

@@ -12,9 +12,7 @@ const ItemList = ({
   header: React$Element<any>
 }) => (
   <div>
-    <HeaderWrapper>
-      {header}
-    </HeaderWrapper>
+    <HeaderWrapper>{header}</HeaderWrapper>
 
     {links.map((link: Link, i: number) => (
       <ItemLink key={i} href={link.url} target="_blank">

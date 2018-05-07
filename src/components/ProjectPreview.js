@@ -38,7 +38,7 @@ const ProjectPreviewBlock = styled.div`
 
 const ProjectName = styled.div`
   padding-top: 5px;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
 `
 
 export default ProjectPreview
