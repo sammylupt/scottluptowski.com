@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import ReactGA from 'react-ga'
 
 import Menu from './components/Menu'
+import Footer from './components/Footer'
 import ProjectListPage from './pages/ProjectListPage'
 import AboutPage from './pages/AboutPage'
 import PostsPage from './pages/PostsPage'
@@ -19,8 +20,6 @@ import type { Project, LocationProps } from './types'
 import { small, large } from './utils'
 
 const GA_ID = 'UA-7600440-11'
-
-const currentYear = new Date().getFullYear();
 
 const renderProjectOrMiss = ({ match }: LocationProps) => {
   const project: ?Project = projects.find(p => p.slug === match.params.project)
@@ -71,9 +70,7 @@ class AppWithSideEffects extends Component {
             render={() => <ContactPage links={links} />}
           />
         </RouteCountainer>
-        <Footer>
-          © {currentYear} Scott Luptowski
-          </Footer>
+        <Footer links={links} />
       </div>
     )
   }
@@ -91,11 +88,4 @@ const RouteCountainer = styled.div`
   ${small`
     width: 95%;
   `}
-`
-
-const Footer = styled.footer`
-  font-size: 0.7em;
-  text-align: center;
-  margin: 2em auto 1em;
-  padding-bottom: 0.5em;
 `
