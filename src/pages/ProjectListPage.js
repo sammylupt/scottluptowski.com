@@ -82,6 +82,8 @@ const Title = styled.p`
   color: rgba(45,55,65,.95);
   animation: ${rotate} 8s linear infinite;
   margin: 0 auto;
+  cursor: default;
+  user-select: none;
 
   ${p => p.fastSpin && `animation: ${fastRotate} ${Times.duration}ms ease-in infinite; `}
   ${large`
