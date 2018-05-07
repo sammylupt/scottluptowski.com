@@ -84,6 +84,7 @@ const Title = styled.p`
   margin: 0 auto;
   cursor: default;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   ${p =>
     p.fastSpin &&

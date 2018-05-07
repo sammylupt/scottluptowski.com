@@ -16,7 +16,7 @@ const Footer = ({ links }: { links: Array<Link> }) => (
     <FooterText>© {currentYear} Scott Luptowski</FooterText>
     <p>
       {links.map(link => (
-        <ContactLink href={link.url} target="_blank" alt={link.title}>
+        <ContactLink key={link.title} href={link.url} target="_blank" alt={link.title}>
           <FontAwesomeIcon icon={['fab', link.title.toLowerCase()]} />
         </ContactLink>
       ))}
@@ -33,12 +33,12 @@ const Container = styled.footer`
 `
 
 const FooterText = styled.p`
-  font-size: 0.7em;
+  font-size: 0.85em;
   margin-bottom: 0.5em;
 `
 
 const ContactLink = styled.a`
-  padding-right: 10px;
+  padding-right: 15px;
   color: #222222 !important;
   font-size: 18px;
   opacity: 0.8;
