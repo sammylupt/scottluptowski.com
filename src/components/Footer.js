@@ -4,11 +4,17 @@ import React from 'react'
 import styled from 'styled-components'
 import type { Link } from '../types'
 
-import fontawesome from '@fortawesome/fontawesome'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import brands from '@fortawesome/fontawesome-free-brands'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faTwitter,
+  faMedium,
+  faGithub,
+  faInstagram,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons'
 
-fontawesome.library.add(brands)
+library.add(faTwitter, faMedium, faGithub, faInstagram, faLinkedin)
 const currentYear = new Date().getFullYear()
 
 const Footer = ({ links }: { links: Array<Link> }) => (

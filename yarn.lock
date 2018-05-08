@@ -6,11 +6,15 @@
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.6.tgz#3cefd6cd88a2256e1daa69b6fc9a6ab5e3c33e4a"
 
-"@fortawesome/fontawesome-free-brands@^5.0.12":
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-brands/-/fontawesome-free-brands-5.0.12.tgz#2e8dfc4d92d95a9ed7aa27f93bccec08317ddcaa"
+"@fortawesome/fontawesome-common-types@^0.2.0-8":
+  version "0.2.0-8"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.0-8.tgz#50bbcc3d585f2d4423e5269821b6ce6fcca00033"
+
+"@fortawesome/fontawesome-svg-core@^1.2.0-13":
+  version "1.2.0-13"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.0-13.tgz#d772f99de6ae3d59b22861abf5188f02161b30c9"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.6"
+    "@fortawesome/fontawesome-common-types" "^0.2.0-8"
 
 "@fortawesome/fontawesome@^1.1.7":
   version "1.1.7"
@@ -18,9 +22,15 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.1.6"
 
-"@fortawesome/react-fontawesome@^0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.19.tgz#9c90c1aac0984687fffbea44aa4ad817c6f4356e"
+"@fortawesome/free-brands-svg-icons@^5.1.0-10":
+  version "5.1.0-10"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.1.0-10.tgz#b93fccd679105f89ab9b902c8ce131f1e670b4e3"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0-8"
+
+"@fortawesome/react-fontawesome@^0.1.0-10":
+  version "0.1.0-10"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.0-10.tgz#e33c487b693db2ee03f4440081192a3eba4848e3"
   dependencies:
     humps "^2.0.1"
     prop-types "^15.5.7"
