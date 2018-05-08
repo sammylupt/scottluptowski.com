@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import { BrowserRouter, Route, withRouter } from 'react-router-dom'
-import ReactDocumentTitle from 'react-document-title'
 import styled from 'styled-components'
 import ReactGA from 'react-ga'
 
@@ -53,7 +52,6 @@ class AppWithSideEffects extends Component {
   render() {
     return (
       <div>
-        <ReactDocumentTitle title="Scott Luptowski" />
         <Menu />
         <RouteCountainer>
           <Route
