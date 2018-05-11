@@ -4,9 +4,10 @@ import React from 'react'
 import ReactDocumentTitle from 'react-document-title'
 import styled from 'styled-components'
 import { small } from '../utils'
+import { PageContainer } from '../components/shared'
 
 const AboutPage = () => (
-  <AboutContainer>
+  <PageContainer>
     <ReactDocumentTitle title="Scott Luptowski | About" />
     <p>
       I'm a developer at{' '}
@@ -38,14 +39,8 @@ const AboutPage = () => (
         <cite>Unsolicited recruiter message on LinkedIn</cite>
       </PressQuote>
     </QuoteSection>
-  </AboutContainer>
+  </PageContainer>
 )
-
-const AboutContainer = styled.div`
-  p {
-    margin-bottom: 1em;
-  }
-`
 
 const PressQuote = styled.blockquote`
   margin-bottom: 1em;

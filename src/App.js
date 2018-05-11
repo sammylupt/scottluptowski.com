@@ -16,7 +16,7 @@ import PageNotFound from './components/PageNotFound'
 
 import { projects, posts, links } from './data'
 import type { Project, LocationProps } from './types'
-import { small, large } from './utils'
+import { small } from './utils'
 
 const GA_ID = 'UA-7600440-11'
 

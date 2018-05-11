@@ -7,7 +7,7 @@ import ItemList from '../components/ItemList'
 
 // not really using this page anymore, keeping it around so links don't break
 const ContactPage = ({ links }: { links: Array<Link> }) => (
-  <div className="section-header">
+  <div>
     <ReactDocumentTitle title="Scott Luptowski | Contact" />
 
     <ItemList header={<p>Get in touch:</p>} links={links} />

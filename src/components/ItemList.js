@@ -3,6 +3,7 @@
 import React from 'react'
 import type { Link } from '../types'
 import styled from 'styled-components'
+import { PageContainer } from '../components/shared'
 
 const ItemList = ({
   links,
@@ -11,20 +12,16 @@ const ItemList = ({
   links: Array<Link>,
   header: React$Element<any>
 }) => (
-  <div>
-    <HeaderWrapper>{header}</HeaderWrapper>
+  <PageContainer>
+    <p>{header}</p>
 
     {links.map((link: Link, i: number) => (
       <ItemLink key={i} href={link.url} target="_blank">
         {link.title}
       </ItemLink>
     ))}
-  </div>
+  </PageContainer>
 )
-
-const HeaderWrapper = styled.div`
-  margin-bottom: 1em;
-`
 
 const ItemLink = styled.a`
   display: block;

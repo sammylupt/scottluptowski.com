@@ -6,7 +6,7 @@ import type { Link } from '../types'
 import ItemList from '../components/ItemList'
 
 const PostsPage = ({ posts }: { posts: Array<Link> }) => (
-  <div className="section-header">
+  <div>
     <ReactDocumentTitle title="Scott Luptowski | Posts" />
 
     <ItemList
