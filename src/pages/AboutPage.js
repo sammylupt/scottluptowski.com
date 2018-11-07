@@ -10,10 +10,7 @@ const AboutPage = () => (
   <PageContainer>
     <ReactDocumentTitle title="Scott Luptowski | About" />
     <p>
-      I'm a developer at{' '}
-      <a href="http://www.greenhouse.io" target="_blank">
-        Greenhouse
-      </a>.
+      I'm a developer at <a href="http://www.frame.io" target="_blank">frame.io</a>.
     </p>
 
     <p>
