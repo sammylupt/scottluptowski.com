@@ -7,6 +7,7 @@ const projects: Array<Project> = [
   {
     name: 'Hamiltowned',
     slug: 'hamiltowned',
+    display: true,
     summary: () => (
       <div>
         <p>
@@ -62,6 +63,7 @@ const projects: Array<Project> = [
   {
     name: 'Nicolas Cage Roulette',
     slug: 'nicolas-cage-roulette',
+    display: true,
     summary: () => (
       <div>
         Nicolas Cage Roulette lets you stream random Nicolas Cage movies on Netflix. Just choose from 'Action Movies' or 'All Movies' and start watching.
@@ -103,6 +105,7 @@ const projects: Array<Project> = [
   {
     name: 'Browse With Guy',
     slug: 'browse-with-guy',
+    display: true,
     summary: () => (
       <div>
         <p>
@@ -148,6 +151,7 @@ const projects: Array<Project> = [
   {
     name: 'SVU EBooks',
     slug: 'svu-ebooks',
+    display: true,
     summary: () => (
       <div>
         SVU EBooks is a series of fake Law and Order SVU episode summaries I generated. I gathered the summary of every SVU episode from Hulu, IMDb, and Rotten Tomatoes, and used a Markov Chain library to predict new episodes.
@@ -172,6 +176,7 @@ const projects: Array<Project> = [
   {
     name: 'Trump Siren',
     slug: 'trump-siren',
+    display: true,
     summary: () => (
       <div>
         Built with
@@ -203,6 +208,7 @@ const projects: Array<Project> = [
   {
     name: 'Standings',
     slug: 'standings',
+    display: true,
     summary: () => (
       <div>
         <p>
@@ -238,6 +244,7 @@ const projects: Array<Project> = [
   {
     name: 'New York Times or Jenny Holzer?',
     slug: 'new-york-times-or-jenny-holzer',
+    display: false,
     summary: () => (
       <div>
         <p>
@@ -272,6 +279,7 @@ const projects: Array<Project> = [
   {
     name: 'spoil.rs',
     slug: 'spoilrs',
+    display: false,
     summary: () => (
       <div>
         <p>

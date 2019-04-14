@@ -19,8 +19,11 @@ const AboutPage = () => (
     </p>
 
     <p>
-      My languages of choice are JavaScript, Ruby, Elixir, and Clojure. When I'm
-      AFK I enjoy travel, food, live music, and bike riding.
+      I like writing code in JavaScript and Rust. I like playing with Unity and Blender. One day I'll properly learn a lisp.
+    </p>
+
+    <p>
+      When I'm AFK I enjoy travel, food, live music, and bike riding.
     </p>
     <QuoteSection>
       <PressQuote>

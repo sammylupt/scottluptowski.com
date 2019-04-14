@@ -20,6 +20,8 @@ import { small } from './utils'
 
 const GA_ID = 'UA-7600440-11'
 
+const displayedProjects = projects.filter(p => p.display);
+
 const renderProjectOrMiss = ({ match }: LocationProps) => {
   const project: ?Project = projects.find(p => p.slug === match.params.project)
 
@@ -57,7 +59,7 @@ class AppWithSideEffects extends Component {
           <Route
             exact
             path="/"
-            render={() => <ProjectListPage projects={projects} />}
+            render={() => <ProjectListPage projects={displayedProjects} />}
           />
           <Route path="/about" render={() => <AboutPage />} />
           <Route path="/posts" render={() => <PostsPage posts={posts} />} />

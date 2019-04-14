@@ -7,7 +7,8 @@ export type Project = {
   links: Array<ProjectLink>,
   featuredImage: ImageWithMeta,
   images?: Array<ImageWithMeta>,
-  tweets?: Array<string>
+  tweets?: Array<string>,
+  display: bool
 }
 
 export type Link = {
